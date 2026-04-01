@@ -1,0 +1,34 @@
+name: Update Tariff News
+
+on:
+  schedule:
+    # Run daily at 12:07 UTC (~8:07 AM ET)
+    - cron: '7 12 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fetch latest news
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/fetch-news.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add news-data.json
+          git diff --staged --quiet || (git commit -m "chore: update tariff news $(date -u +%Y-%m-%d)" && git push)
