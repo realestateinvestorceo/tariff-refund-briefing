@@ -69,7 +69,7 @@ def call_claude_api():
         headers={
             "Content-Type": "application/json",
             "x-api-key": API_KEY,
-            "anthropic-version": "2023-06-01"
+            "anthropic-version": "2025-01-01"
         },
         method="POST"
     )
