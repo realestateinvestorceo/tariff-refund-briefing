@@ -1,4 +1,69 @@
 {
-  "last_updated": "2026-04-01T12:00:00Z",
-  "items": []
+  "last_updated": "2026-04-01T13:22:32.979568+00:00",
+  "items": [
+    {
+      "date": "MARCH 31, 2026",
+      "badge": "BREAKING",
+      "category": "breaking",
+      "headline": "CBP Files Latest CAPE Progress Report: 85% Portal Complete",
+      "summary": "CBP filed its March 31 status update showing the CAPE Claim Portal is now 85% complete, up from previous reports. The Mass Processing component remains limited to unliquidated entries and those within the 90-day voluntary reliquidation period. Judge Eaton continues to suspend the immediate refund order pending system completion.",
+      "source": "International Trade Insights"
+    },
+    {
+      "date": "MARCH 27, 2026",
+      "badge": "MAJOR UPDATE",
+      "category": "breaking",
+      "headline": "CIT Expands Refund Order to Include Finally Liquidated Entries",
+      "summary": "Judge Eaton amended his March 20 order to include entries with final liquidations in IEEPA refund coverage. This means all entries subject to IEEPA duties are now entitled to refunds, regardless of their liquidation status or whether protests were filed within the 180-day window.",
+      "source": "Greenberg Traurig & Thompson Hine"
+    },
+    {
+      "date": "MARCH 26, 2026",
+      "badge": "WATCH LIST",
+      "category": "watch",
+      "headline": "Wave of Consumer Class Actions Target Tariff Pass-Through",
+      "summary": "Major retailers including Costco, Fabletics, FedEx, and EssilorLuxottica face class action lawsuits alleging they passed IEEPA tariff costs to consumers but will retain government refunds. Plaintiffs seek restitution under unjust enrichment theories. Cases filed in multiple federal districts.",
+      "source": "D&O Diary & Covington"
+    },
+    {
+      "date": "MARCH 25, 2026",
+      "badge": "UPDATE",
+      "category": "detail",
+      "headline": "Electronic ACH Refund Setup Critical as April Launch Nears",
+      "summary": "CBP continues emphasizing that all IEEPA refunds will be electronic-only through ACH. Nearly 27,000 importers have registered for digital returns. Companies without ACH enrollment will have refund requests denied. CBP targeting late April 2026 for CAPE system launch.",
+      "source": "Supply Chain Dive & CLA"
+    },
+    {
+      "date": "MARCH 24, 2026",
+      "badge": "NEW DETAIL",
+      "category": "detail",
+      "headline": "CAPE Form 4811 Enables Third-Party Refund Designations",
+      "summary": "CBP clarifies that refunds can be issued to parties designated by importers using CBP Form 4811. This feature could be critical for tariff refund claim buyers to receive refunds directly for claims they have purchased, potentially creating a secondary market for refund rights.",
+      "source": "Orrick & Troutman Pepper"
+    },
+    {
+      "date": "MARCH 12, 2026",
+      "badge": "POSITIVE",
+      "category": "positive",
+      "headline": "States Challenge Section 122 Replacement Tariffs as Illegal",
+      "summary": "24 states sued the Trump administration arguing the new 10% Section 122 replacement tariffs are also illegal. New York's AG stated the administration lacks authority for these tariffs. If successful, this could lead to additional refund opportunities beyond IEEPA duties.",
+      "source": "SCOTUSblog & Freshfields"
+    },
+    {
+      "date": "MARCH 11, 2026",
+      "badge": "LEGAL",
+      "category": "legal",
+      "headline": "Senate Dems Introduce 'Tariff Refund Act of 2026'",
+      "summary": "Senate Democrats introduced legislation requiring the administration to refund all IEEPA tariff revenue with interest within 180 days, prioritizing small businesses. The bill faces uncertain prospects given potential presidential veto and partisan divisions in Congress.",
+      "source": "Troutman Pepper"
+    },
+    {
+      "date": "MARCH 4, 2026",
+      "badge": "LEGAL",
+      "category": "legal",
+      "headline": "Judge Eaton Designated Sole IEEPA Refund Case Handler",
+      "summary": "CIT Chief Judge designated Judge Richard Eaton as the only judge to hear all IEEPA refund cases going forward. This consolidation aims to streamline the process for businesses seeking refunds and ensures consistent rulings across the estimated 2,000+ pending cases.",
+      "source": "Bradley & Holland Knight"
+    }
+  ]
 }
