@@ -39,15 +39,22 @@
 body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
 .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
 
-/* Header */
+/* Hero */
 .hero { background: var(--text); color: #fff; padding: 80px 0 60px; position: relative; overflow: hidden; }
 .hero::before { content: ''; position: absolute; top: -200px; right: -100px; width: 500px; height: 500px; border-radius: 50%; background: rgba(37,99,235,0.08); }
 .hero::after { content: ''; position: absolute; bottom: -150px; left: -50px; width: 400px; height: 400px; border-radius: 50%; background: rgba(5,150,105,0.06); }
 .hero .container { position: relative; z-index: 1; }
 .hero-label { font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
 .hero h1 { font-family: var(--font-display); font-size: 42px; font-weight: 400; line-height: 1.15; margin-bottom: 16px; max-width: 700px; }
-.hero p { font-size: 16px; color: rgba(255,255,255,0.65); max-width: 600px; line-height: 1.7; }
+.hero p.hero-sub { font-size: 16px; color: rgba(255,255,255,0.65); max-width: 600px; line-height: 1.7; }
 .hero-date { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.4); }
+.hero-badge { display: inline-block; background: var(--amber); color: #fff; font-size: 13px; font-weight: 700; padding: 5px 14px; border-radius: 6px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; }
+.hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 28px 0; max-width: 480px; }
+.hero-stat { background: rgba(255,255,255,0.08); border-radius: var(--radius); padding: 14px 16px; }
+.hero-stat .label { font-size: 11px; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.5px; }
+.hero-stat .val { font-size: 22px; font-weight: 700; margin-top: 2px; }
+.hero-buttons { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
+.hero-buttons a { display: inline-block; padding: 11px 20px; border-radius: var(--radius); font-size: 13px; font-weight: 600; text-decoration: none; color: #fff; }
 
 /* Sticky header */
 #sticky-header { position:sticky;top:0;z-index:100;background:var(--surface);border-bottom:1px solid var(--border);padding:12px 0; }
@@ -65,8 +72,11 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text);
 .section-divider { border-top:1px solid var(--border);padding-top:8px;margin-bottom:0; }
 .section-divider .divider-label { font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-tertiary);padding:0 24px;max-width:948px;margin:0 auto; }
 
-/* Sections - all visible, stacked */
+/* Sections */
 .section { display:block;padding:48px 0 64px; }
+.section-header { margin-bottom: 40px; }
+.section-header h2 { font-family: var(--font-display); font-size: 32px; font-weight: 400; margin-bottom: 8px; }
+.section-header p { font-size: 15px; color: var(--text-secondary); max-width: 600px; }
 
 /* Collapsible cards */
 .card-collapsible { position:relative; }
@@ -75,9 +85,6 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text);
 /* Back to top */
 #back-to-top { position:fixed;bottom:24px;right:24px;width:40px;height:40px;border-radius:50%;background:var(--accent);color:#fff;border:none;font-size:18px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.2);z-index:50;opacity:0;transition:opacity 0.3s;pointer-events:none; }
 #back-to-top.visible { opacity:1;pointer-events:auto; }
-.section-header { margin-bottom: 40px; }
-.section-header h2 { font-family: var(--font-display); font-size: 32px; font-weight: 400; margin-bottom: 8px; }
-.section-header p { font-size: 15px; color: var(--text-secondary); max-width: 600px; }
 
 /* Metric cards */
 .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin: 32px 0; }
@@ -85,56 +92,11 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text);
 .metric-card .label { font-size: 12px; font-weight: 500; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
 .metric-card .value { font-size: 32px; font-weight: 700; line-height: 1; }
 .metric-card .sub { font-size: 12px; color: var(--text-secondary); margin-top: 6px; }
-.metric-card.highlight { background: var(--text); color: #fff; border-color: var(--text); }
-.metric-card.highlight .label { color: rgba(255,255,255,0.5); }
-.metric-card.highlight .sub { color: rgba(255,255,255,0.55); }
 
 /* Content cards */
 .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px; margin-bottom: 20px; }
 .card h3 { font-size: 18px; font-weight: 600; margin-bottom: 12px; }
 .card p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
-
-/* Distribution bar */
-.dist-bar-wrap { margin: 32px 0; }
-.dist-bar { display: flex; height: 48px; border-radius: var(--radius); overflow: hidden; margin-bottom: 12px; }
-.dist-bar .seg { display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: #fff; transition: width 0.6s ease; }
-.dist-bar .seg-big { background: var(--accent); }
-.dist-bar .seg-small { background: var(--amber); }
-.dist-legend { display: flex; gap: 24px; font-size: 13px; color: var(--text-secondary); }
-.dist-legend span { display: flex; align-items: center; gap: 6px; }
-.dist-legend .dot { width: 10px; height: 10px; border-radius: 3px; }
-
-/* Comparison table */
-.compare-wrap { overflow-x: auto; margin: 32px 0; }
-.compare { width: 100%; border-collapse: collapse; font-size: 14px; }
-.compare thead th { text-align: left; padding: 14px 16px; font-weight: 600; font-size: 13px; border-bottom: 2px solid var(--text); vertical-align: bottom; }
-.compare thead th:first-child { width: 22%; }
-.compare thead th.col-erc { background: var(--green-light); border-radius: var(--radius) var(--radius) 0 0; color: var(--green-text); }
-.compare thead th.col-tariff { background: var(--amber-light); border-radius: var(--radius) var(--radius) 0 0; color: var(--amber-text); }
-.compare thead th.col-edge { border-radius: var(--radius) var(--radius) 0 0; background: var(--surface-alt); color: var(--text-secondary); }
-.compare tbody td { padding: 12px 16px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
-.compare tbody td:first-child { font-weight: 600; color: var(--text); }
-.compare tbody td.col-erc { background: rgba(236,253,245,0.5); }
-.compare tbody td.col-tariff { background: rgba(255,251,235,0.5); }
-.compare tbody td.col-edge { background: rgba(243,242,238,0.5); }
-.compare tbody tr:last-child td { border-bottom: none; }
-.tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 6px; margin-left: 4px; vertical-align: middle; }
-.tag-erc { background: var(--green-light); color: var(--green-text); }
-.tag-tariff { background: var(--amber-light); color: var(--amber-text); }
-.tag-warn { background: var(--red-light); color: var(--red-text); }
-.tag-neutral { background: var(--surface-alt); color: var(--text-secondary); }
-
-/* Timeline */
-.timeline { position: relative; margin: 40px 0; padding-left: 28px; }
-.timeline::before { content: ''; position: absolute; left: 8px; top: 8px; bottom: 8px; width: 2px; background: var(--border-strong); border-radius: 1px; }
-.tl-item { position: relative; padding-bottom: 28px; }
-.tl-item:last-child { padding-bottom: 0; }
-.tl-item::before { content: ''; position: absolute; left: -24px; top: 6px; width: 12px; height: 12px; border-radius: 50%; border: 2.5px solid var(--accent); background: var(--bg); }
-.tl-item.done::before { background: var(--accent); }
-.tl-item.urgent::before { border-color: var(--red); background: var(--red); }
-.tl-date { font-size: 12px; font-weight: 600; color: var(--accent-text); margin-bottom: 2px; }
-.tl-title { font-size: 15px; font-weight: 600; color: var(--text); }
-.tl-desc { font-size: 13px; color: var(--text-secondary); margin-top: 2px; }
 
 /* Risks */
 .risk { display: flex; gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--border); }
@@ -148,10 +110,6 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text);
 .verdict-banner::before { content: ''; position: absolute; top: -80px; right: -40px; width: 250px; height: 250px; border-radius: 50%; background: rgba(217,119,6,0.1); }
 .verdict-banner h3 { font-family: var(--font-display); font-size: 28px; font-weight: 400; margin-bottom: 8px; position: relative; }
 .verdict-banner p { font-size: 14px; color: rgba(255,255,255,0.65); max-width: 500px; line-height: 1.7; position: relative; }
-.verdict-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px; position: relative; }
-.verdict-metric { background: rgba(255,255,255,0.08); border-radius: var(--radius); padding: 16px; }
-.verdict-metric .label { font-size: 11px; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.5px; }
-.verdict-metric .val { font-size: 20px; font-weight: 700; margin-top: 4px; }
 
 /* Competitive landscape */
 .player-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 32px 0; }
@@ -160,22 +118,20 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text);
 .player-card h4 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
 .player-card p { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
 
-/* Action plan */
-.phase { margin-bottom: 32px; }
-.phase-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
-.phase-num { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700; }
-.phase-num.p1 { background: var(--red-light); color: var(--red-text); }
-.phase-num.p2 { background: var(--amber-light); color: var(--amber-text); }
-.phase-num.p3 { background: var(--accent-light); color: var(--accent-text); }
-.phase-num.p4 { background: var(--green-light); color: var(--green-text); }
-.phase-num.p5 { background: var(--purple-light); color: var(--purple-text); }
-.phase-title { font-size: 18px; font-weight: 600; }
-.phase-when { font-size: 12px; color: var(--text-tertiary); }
-.action-list { display: flex; flex-direction: column; gap: 10px; margin-left: 48px; }
-.action-item { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 20px; }
-.action-item h5 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
-.action-item p { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
-.action-item .detail { font-size: 12px; color: var(--text-tertiary); margin-top: 6px; font-style: italic; }
+/* Scenario cards */
+.scenario-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin: 32px 0; }
+.scenario-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; text-align: center; }
+.scenario-card .scenario-name { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
+.scenario-card .scenario-gross { font-size: 28px; font-weight: 700; line-height: 1; }
+.scenario-card .scenario-detail { font-size: 12px; color: var(--text-secondary); margin-top: 6px; }
+.scenario-card .scenario-net { font-size: 16px; font-weight: 700; color: var(--green); margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); }
+.scenario-card.highlight { background: var(--amber-light); border-color: var(--amber); }
+
+/* Key dates compact */
+.key-date { display: flex; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
+.key-date:last-child { border: none; }
+.key-date .kd-date { font-weight: 700; color: var(--text); min-width: 100px; white-space: nowrap; }
+.key-date .kd-desc { color: var(--text-secondary); }
 
 /* Footer */
 .footer { padding: 40px 0; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text-tertiary); }
@@ -184,15 +140,16 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text);
 @media (max-width: 640px) {
   .hero { padding:48px 0 36px; }
   .hero h1 { font-size: 28px; }
-  .hero p { font-size: 14px; }
+  .hero p.hero-sub { font-size: 14px; }
+  .hero-stat .val { font-size: 18px; }
+  .hero-buttons a { font-size: 12px; padding: 10px 14px; }
   .section-header h2 { font-size: 24px; }
   .card { padding: 20px; }
   .section { padding: 32px 0 48px; }
   .metrics { grid-template-columns: 1fr 1fr; }
   .metric-card .value { white-space: nowrap; }
   .player-grid { grid-template-columns: 1fr; }
-  .verdict-metrics { grid-template-columns: 1fr; }
-  .dist-legend { flex-direction: column; gap: 8px; }
+  .scenario-grid { grid-template-columns: 1fr; }
 
   /* Collapsible cards on mobile */
   .card-collapsible .card-body { max-height:120px;overflow:hidden;position:relative; }
@@ -200,19 +157,8 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text);
   .card-collapsible.expanded .card-body { max-height:none; }
   .card-collapsible.expanded .card-body::after { display:none; }
   .card-collapse-toggle { display:block; }
-
-  /* Mobile table cards */
-  .compare-mobile thead { display:none; }
-  .compare-mobile tbody, .compare-mobile tr, .compare-mobile td { display:block;width:100%; }
-  .compare-mobile tbody { display:flex;flex-direction:column;gap:12px; }
-  .compare-mobile tr { background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px; }
-  .compare-mobile td { padding:4px 0;border:none;font-size:13px;background:none !important; }
-  .compare-mobile td:first-child { font-size:15px;font-weight:600;margin-bottom:8px;color:var(--text);padding-bottom:8px;border-bottom:1px solid var(--border); }
-  .compare-mobile td::before { content:attr(data-label);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.5px;color:var(--text-tertiary);display:block;margin-top:6px; }
-  .compare-mobile td:first-child::before { display:none; }
 }
 
-/* Last section extra padding */
 .section:last-of-type { padding-bottom:80px; }
 
 @media print {
@@ -229,8 +175,20 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text);
 <div class="hero">
   <div class="container">
     <div class="hero-label">Executive briefing for JZ</div>
-    <h1>IEEPA Tariff Refund Opportunity: Should We Build This?</h1>
-    <p>An honest analysis of the $166B tariff refund wave — the market size, realistic revenue models, competitive landscape, key risks, and a 30-day launch plan if we decide to move.</p>
+    <div class="hero-badge">Conditional Yes</div>
+    <h1>IEEPA Tariff Refund: Should We Build This?</h1>
+    <p class="hero-sub">A real $5–20M opportunity if we move fast. Not another ERC — smaller market, shorter window, leaner operation.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="label">Refund pool</div><div class="val">$166B+</div></div>
+      <div class="hero-stat"><div class="label">Importers</div><div class="val">330K+</div></div>
+      <div class="hero-stat"><div class="label">Realistic net</div><div class="val">~$8-10M</div></div>
+      <div class="hero-stat"><div class="label">Window</div><div class="val">6-12 mo</div></div>
+    </div>
+    <div class="hero-buttons">
+      <a href="#sec-news" onclick="scrollToSection('sec-news');return false;" style="background:#DC2626;">Latest News ↓</a>
+      <a href="#sec-competition" onclick="scrollToSection('sec-competition');return false;" style="background:#2563EB;">Who's Competing ↓</a>
+      <a href="#sec-revenue" onclick="scrollToSection('sec-revenue');return false;" style="background:transparent;border:1.5px solid rgba(255,255,255,0.5);">Revenue Model ↓</a>
+    </div>
     <div class="hero-date">Prepared March 31, 2026 — U.S. Customs and Border Protection (CBP) targeting CAPE refund system for mid-April (no firm date committed)</div>
   </div>
 </div>
@@ -238,49 +196,22 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text);
 <!-- STICKY HEADER + HAMBURGER -->
 <div id="sticky-header">
   <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
-    <span class="section-label">Executive Summary</span>
+    <span class="section-label">The verdict</span>
     <button class="hamburger" onclick="openNav()" aria-label="Menu">☰</button>
   </div>
 </div>
 
 <div id="nav-overlay">
   <button class="close-btn" onclick="closeNav()" aria-label="Close">✕</button>
-  <a href="#sec-tldr" onclick="scrollToSection('sec-tldr');return false;">Executive summary</a>
   <a href="#sec-verdict" onclick="scrollToSection('sec-verdict');return false;">The verdict</a>
   <a href="#sec-revenue" onclick="scrollToSection('sec-revenue');return false;">Revenue model</a>
   <a href="#sec-risks" onclick="scrollToSection('sec-risks');return false;">Key risks</a>
-  <a href="#sec-numbers" onclick="scrollToSection('sec-numbers');return false;">The numbers</a>
-  <a href="#sec-erc" onclick="scrollToSection('sec-erc');return false;">ERC vs. tariffs</a>
-  <a href="#sec-affiliate" onclick="scrollToSection('sec-affiliate');return false;">Affiliate model</a>
-  <a href="#sec-action" onclick="scrollToSection('sec-action');return false;">30-day action plan</a>
   <a href="#sec-competition" onclick="scrollToSection('sec-competition');return false;">Competition</a>
-  <a href="#sec-timeline" onclick="scrollToSection('sec-timeline');return false;">Timeline</a>
   <a href="#sec-news" onclick="scrollToSection('sec-news');return false;">Latest news</a>
 </div>
 
-<!-- EXECUTIVE SUMMARY -->
-<div class="section" id="sec-tldr" style="padding:32px 0;">
-  <div class="container">
-    <div style="background:var(--amber-light);border:2px solid var(--amber);border-radius:var(--radius-lg);padding:32px;text-align:center;">
-      <div style="display:inline-block;background:var(--amber);color:#fff;font-size:14px;font-weight:700;padding:6px 16px;border-radius:6px;letter-spacing:1px;margin-bottom:12px;">CONDITIONAL YES</div>
-      <p style="font-size:18px;font-weight:600;color:var(--text);max-width:500px;margin:0 auto 24px;">This is a real $5–20M opportunity if we move fast. It's not another ERC.</p>
-      <div class="metrics" style="grid-template-columns:1fr 1fr;margin:0 0 24px;">
-        <div class="metric-card" style="text-align:center"><div class="label">Refund pool</div><div class="value" style="font-size:28px">$166B+</div></div>
-        <div class="metric-card" style="text-align:center"><div class="label">Affected importers</div><div class="value" style="font-size:28px">330K+</div></div>
-        <div class="metric-card" style="text-align:center"><div class="label">Realistic net revenue</div><div class="value" style="font-size:28px">~$8-10M</div></div>
-        <div class="metric-card" style="text-align:center"><div class="label">Window</div><div class="value" style="font-size:28px">6-12 mo</div></div>
-      </div>
-      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-        <a href="#sec-verdict" onclick="scrollToSection('sec-verdict');return false;" style="display:inline-block;background:var(--text);color:#fff;padding:12px 24px;border-radius:var(--radius);font-size:14px;font-weight:600;text-decoration:none;">Read full verdict ↓</a>
-        <a href="#sec-action" onclick="scrollToSection('sec-action');return false;" style="display:inline-block;background:var(--accent);color:#fff;padding:12px 24px;border-radius:var(--radius);font-size:14px;font-weight:600;text-decoration:none;">See the 30-day plan ↓</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-
+<!-- VERDICT -->
 <div class="section-divider"><div class="container"><span class="divider-label">The verdict</span></div></div>
-<!-- SECTION 8: VERDICT -->
 <div class="section" id="sec-verdict">
   <div class="container">
     <div class="section-header">
@@ -290,247 +221,68 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text);
     <div class="verdict-banner">
       <h3>Conditional yes — but go in with realistic expectations</h3>
       <p>A viable $5–20M total revenue opportunity exists in the mid-market segment. But it requires fast execution, realistic expectations, and a model that looks more like "bank registration + refund filing service" than "tariff recovery specialist."</p>
-      <div class="verdict-metrics">
-        <div class="verdict-metric"><div class="label">Realistic revenue range</div><div class="val">$2–50M total</div></div>
-        <div class="verdict-metric"><div class="label">Target market</div><div class="val">300K+ unregistered importers</div></div>
-        <div class="verdict-metric"><div class="label">Best entry point</div><div class="val">Bank registration service</div></div>
-        <div class="verdict-metric"><div class="label">CAPE target</div><div class="val">Mid-April (no firm date)</div></div>
-      </div>
     </div>
 
     <div class="card">
       <h3>Why bank registration is the fastest path</h3>
-      <p>Over 300,000 importers cannot receive refunds because they haven't set up electronic bank deposits in CBP's online system. Over 12,300 approved refunds have already been rejected per CBP's March 27 bulletin, and only ~21,000 importers (~6%) are set up. This is an immediate, concrete pain point that doesn't require customs expertise to solve — and it creates a natural upsell into refund claim filing assistance.</p>
+      <p>Over 300,000 importers can't receive refunds because they haven't registered their bank account with CBP. Over 12,300 approved refunds already rejected. Only ~21,000 importers (~6%) are set up — that's the entry point.</p>
     </div>
 
     <div class="card">
       <h3>The smarter long play</h3>
-      <p>Use tariff refund services as a customer acquisition channel for ongoing trade compliance advisory, supply chain consulting, or related services. Turn a one-time event into a recurring business. That strategic pivot is more defensible and sustainable than treating this as a standalone opportunity.</p>
+      <p>Use tariff refunds as a customer acquisition channel for ongoing trade compliance advisory. Turn a one-time event into recurring revenue.</p>
     </div>
   </div>
 </div>
 
-
+<!-- REVENUE MODEL -->
 <div class="section-divider"><div class="container"><span class="divider-label">Revenue model</span></div></div>
-<!-- SECTION 6: REVENUE MODEL -->
 <div class="section" id="sec-revenue">
   <div class="container">
     <div class="section-header">
-      <h2>Revenue model: how we get to $2–50M</h2>
-      <p>Here's the math, step by step. Three scenarios from conservative to aggressive.</p>
+      <h2>Three scenarios</h2>
+      <p>Addressable market: ~270,000 mid-market importers after removing large enterprises and companies that can't file.</p>
     </div>
 
-    <div class="card">
-      <h3>Step 1: Define the addressable market</h3>
-      <p>Start with 330,000+ importers who paid IEEPA tariffs. Remove the large enterprises who already have elite law firms and Big Four advisors — that's roughly the top 20,000–30,000 importers. Remove companies where the foreign seller handled customs instead of the U.S. buyer (so they're not the listed importer and can't claim) — estimates suggest 10–20% of the remainder. What's left is the realistic mid-market pool.</p>
-      <div class="metrics" style="margin-top:20px;">
-        <div class="metric-card">
-          <div class="label">Total affected importers</div>
-          <div class="value" style="font-size:24px">330,000+</div>
-          <div class="sub">Per CBP's sworn court declaration</div>
-        </div>
-        <div class="metric-card">
-          <div class="label">Minus large/represented</div>
-          <div class="value" style="font-size:24px; color:var(--red)">−30,000</div>
-          <div class="sub">Already have law firms, brokers, Big Four</div>
-        </div>
-        <div class="metric-card">
-          <div class="label">Minus not the listed importer</div>
-          <div class="value" style="font-size:24px; color:var(--red)">−30,000</div>
-          <div class="sub">~10% — foreign seller handled customs, so the U.S. company can't claim</div>
-        </div>
-        <div class="metric-card">
-          <div class="label">Realistic addressable pool</div>
-          <div class="value" style="font-size:24px; color:var(--green)">~270,000</div>
-          <div class="sub">Mid-market importers who need help</div>
-        </div>
+    <div class="scenario-grid">
+      <div class="scenario-card">
+        <div class="scenario-name" style="color:var(--red-text)">Conservative</div>
+        <div class="scenario-gross">$1.5M</div>
+        <div class="scenario-detail">500 clients × $3K avg</div>
+        <div class="scenario-net">Net: $900K–$1.1M</div>
       </div>
-      <p style="margin-top:16px; font-size:13px; color:var(--text-secondary)"><strong>Important caveat:</strong> "Addressable" doesn't mean "reachable." Many of these are tiny one-time importers. The sweet spot is importers with 10–500 import shipments and $10K–$500K in refunds owed — likely 50,000–100,000 companies.</p>
-    </div>
-
-    <div class="card">
-      <h3>Step 2: Estimate conversion rates</h3>
-      <p>In a compressed window (6–12 months) with an outbound sales team, what percentage of the addressable market can we realistically close?</p>
-      <div class="compare-wrap">
-        <table class="compare compare-mobile" style="margin:16px 0">
-          <thead>
-            <tr>
-              <th>Scenario</th>
-              <th>Target pool</th>
-              <th>Conversion rate</th>
-              <th>Clients signed</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Conservative</td>
-              <td>50,000</td>
-              <td>1%</td>
-              <td><strong>500</strong></td>
-            </tr>
-            <tr>
-              <td>Moderate</td>
-              <td>75,000</td>
-              <td>3%</td>
-              <td><strong>2,250</strong></td>
-            </tr>
-            <tr>
-              <td>Aggressive</td>
-              <td>100,000</td>
-              <td>5%</td>
-              <td><strong>5,000</strong></td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="scenario-card highlight">
+        <div class="scenario-name" style="color:var(--amber-text)">Moderate</div>
+        <div class="scenario-gross">$11.25M</div>
+        <div class="scenario-detail">2,250 clients × $5K avg</div>
+        <div class="scenario-net">Net: $8M–$10M</div>
       </div>
-      <p style="font-size:13px; color:var(--text-secondary);">The tariff refund market is smaller than other government refund programs, and most importers already have broker relationships, making 1–5% conversion realistic.</p>
-    </div>
-
-    <div class="card">
-      <h3>Step 3: Revenue per client</h3>
-      <p>Revenue comes from two service layers, each with different pricing models.</p>
-      <div class="compare-wrap">
-        <table class="compare compare-mobile" style="margin:16px 0">
-          <thead>
-            <tr>
-              <th>Service</th>
-              <th>Pricing model</th>
-              <th>Revenue per client</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Bank registration + system setup</td>
-              <td>Flat fee</td>
-              <td>$500–$1,500</td>
-            </tr>
-            <tr>
-              <td>Refund claim preparation + filing</td>
-              <td>3–5% of refund recovered</td>
-              <td>$1,500–$10,000</td>
-            </tr>
-            <tr>
-              <td>Formal dispute filing (complex cases)</td>
-              <td>Via partner law firm (referral fee)</td>
-              <td>$500–$2,000 referral</td>
-            </tr>
-            <tr>
-              <td style="font-weight:600; color:var(--accent)">Blended total per client</td>
-              <td></td>
-              <td style="font-weight:600; color:var(--accent)">$2,000–$10,000</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p style="font-size:13px; color:var(--text-secondary);"><strong>How the 3–5% works:</strong> A mid-market importer with a $150,000 refund pays $4,500–$7,500. We only get paid if they get paid.</p>
-    </div>
-
-    <div class="card" style="background:var(--surface-alt); border:none;">
-      <h3>Step 4: The three scenarios</h3>
-      <div class="compare-wrap">
-        <table class="compare compare-mobile" style="margin:16px 0;">
-          <thead>
-            <tr>
-              <th></th>
-              <th style="background:var(--red-light); color:var(--red-text)">Conservative</th>
-              <th style="background:var(--amber-light); color:var(--amber-text)">Moderate</th>
-              <th style="background:var(--green-light); color:var(--green-text)">Aggressive</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Clients signed</td>
-              <td>500</td>
-              <td>2,250</td>
-              <td>5,000</td>
-            </tr>
-            <tr>
-              <td>Avg revenue per client</td>
-              <td>$3,000</td>
-              <td>$5,000</td>
-              <td>$7,500</td>
-            </tr>
-            <tr>
-              <td style="font-weight:700">Gross revenue</td>
-              <td style="font-weight:700">$1.5M</td>
-              <td style="font-weight:700">$11.25M</td>
-              <td style="font-weight:700">$37.5M</td>
-            </tr>
-            <tr>
-              <td>Estimated overhead</td>
-              <td>$400K–$600K</td>
-              <td>$1.5M–$3M</td>
-              <td>$4M–$8M</td>
-            </tr>
-            <tr>
-              <td style="font-weight:700; color:var(--green)">Net profit</td>
-              <td style="font-weight:700; color:var(--green)">$900K–$1.1M</td>
-              <td style="font-weight:700; color:var(--green)">$8M–$10M</td>
-              <td style="font-weight:700; color:var(--green)">$29M–$33M</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Overhead assumptions</h3>
-      <p>This is a lean operation — it's mostly sales and data work, not specialist accounting or legal labor.</p>
-      <div class="compare-wrap">
-        <table class="compare compare-mobile" style="margin:16px 0;">
-          <thead>
-            <tr><th>Cost item</th><th>Conservative</th><th>Moderate</th><th>Aggressive</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>SDRs / sales team (3–10 reps)</td><td>$150K</td><td>$500K</td><td>$1.5M</td></tr>
-            <tr><td>Operations / data team (2–5 people)</td><td>$100K</td><td>$400K</td><td>$1M</td></tr>
-            <tr><td>Trade data platform (ImportGenius/PIERS)</td><td>$10K</td><td>$15K</td><td>$25K</td></tr>
-            <tr><td>Legal partner costs / referral fees</td><td>$50K</td><td>$200K</td><td>$500K</td></tr>
-            <tr><td>Marketing / lead gen</td><td>$50K</td><td>$200K</td><td>$500K</td></tr>
-            <tr><td>Entity setup, insurance, compliance</td><td>$40K</td><td>$75K</td><td>$150K</td></tr>
-            <tr><td>Rep commissions (30–50% of fees)</td><td>—</td><td>$150K</td><td>$4M</td></tr>
-            <tr><td style="font-weight:600">Total estimated overhead</td><td style="font-weight:600">~$400K</td><td style="font-weight:600">~$1.5M</td><td style="font-weight:600">~$7.7M</td></tr>
-          </tbody>
-        </table>
+      <div class="scenario-card">
+        <div class="scenario-name" style="color:var(--green-text)">Aggressive</div>
+        <div class="scenario-gross">$37.5M</div>
+        <div class="scenario-detail">5,000 clients × $7.5K avg</div>
+        <div class="scenario-net">Net: $29M–$33M</div>
       </div>
     </div>
 
     <div class="card" style="border-left: 4px solid var(--amber); border-radius: 0 var(--radius-lg) var(--radius-lg) 0;">
       <h3>Why the range is so wide ($2M–$50M)</h3>
-      <p>The range reflects genuine uncertainty across three variables: how many importers you can reach in a compressed window (6–12 months), what fee level the market will bear once CAPE makes the process transparent, and whether the 20% percentage-of-recovery model (like the law firms are charging) is sustainable or compresses to 3–5% quickly.</p>
-      <p style="margin-top:12px;">The <strong>moderate scenario ($8–10M net)</strong> is the most realistic if JZ can deploy an aggressive sales team and partner with a law firm for the complex cases. The conservative scenario ($900K–$1.1M) represents a "testing the waters" approach with a small team. The aggressive scenario ($29M+) requires everything to go right — early mover advantage, high conversion, and fees holding up.</p>
+      <p>The range reflects genuine uncertainty across three variables: how many importers you can reach in a compressed 6–12 month window, what fee level the market will bear once CAPE makes the process transparent, and whether the 20% percentage-of-recovery model (like the law firms are charging) is sustainable or compresses to 3–5% quickly. The <strong>moderate scenario ($8–10M net)</strong> is the most realistic.</p>
     </div>
 
     <div class="card">
-      <h3>Comparison to ERC economics</h3>
-      <div class="compare-wrap">
-        <table class="compare compare-mobile" style="margin:16px 0;">
-          <thead>
-            <tr><th>Metric</th><th class="col-erc" data-label="ERC (what we did)">ERC Specialists</th><th class="col-tariff" data-label="Tariff refunds">Tariff refund (moderate)</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Clients processed</td><td class="col-erc" data-label="ERC (what we did)">Thousands</td><td class="col-tariff" data-label="Tariff refunds">~2,250</td></tr>
-            <tr><td>Avg revenue per client</td><td class="col-erc" data-label="ERC (what we did)">$50K–$200K</td><td class="col-tariff" data-label="Tariff refunds">$5,000</td></tr>
-            <tr><td>Total claims processed</td><td class="col-erc" data-label="ERC (what we did)">$7.7B</td><td class="col-tariff" data-label="Tariff refunds">~$340M</td></tr>
-            <tr><td>Window</td><td class="col-erc" data-label="ERC (what we did)">3+ years</td><td class="col-tariff" data-label="Tariff refunds">6–12 months</td></tr>
-            <tr><td>Team required</td><td class="col-erc" data-label="ERC (what we did)">CPAs, tax specialists, large sales org</td><td class="col-tariff" data-label="Tariff refunds">SDRs + data ops (leaner)</td></tr>
-            <tr><td>Overhead ratio</td><td class="col-erc" data-label="ERC (what we did)">Higher (specialist labor)</td><td class="col-tariff" data-label="Tariff refunds">Lower (administrative work)</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p style="font-size:13px; color:var(--text-secondary);">ERC Specialists processed $7.7B in claims and earned ~$1.8B in commission revenue over 3+ years — then paid affiliates from that. The tariff opportunity at the moderate scenario is roughly $11M in fee revenue over 6–12 months. It's a real business — just not the same scale.</p>
+      <h3>This is not another ERC</h3>
+      <p>ERC had 3.6M eligible businesses, $50K–$500K per client, and a 3+ year window with subjective eligibility. This has 330K importers, $2K–$10K per client, a 6–12 month window, and binary eligibility. ERC wins on 10 of 14 factors. It's a real business — just a fundamentally different scale.</p>
     </div>
   </div>
 </div>
 
-
+<!-- RISKS -->
 <div class="section-divider"><div class="container"><span class="divider-label">Key risks</span></div></div>
-<!-- SECTION 5: RISKS -->
 <div class="section" id="sec-risks">
   <div class="container">
     <div class="section-header">
-      <h2>Five key risks to understand</h2>
-      <p>These are the structural reasons this opportunity has real limits.</p>
+      <h2>Five key risks</h2>
     </div>
 
     <div class="card">
@@ -538,566 +290,43 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text);
         <div class="risk-num">1</div>
         <div class="risk-content">
           <h4>The window is months, not years</h4>
-          <p>The tariff refund is a one-time event. Once CBP's CAPE system processes the backlog (estimated 6–12 months), the business evaporates. You must acquire customers, process claims, and collect fees in a compressed timeline.</p>
+          <p>Once CBP's CAPE system processes the backlog, the business evaporates.</p>
         </div>
       </div>
       <div class="risk">
         <div class="risk-num">2</div>
         <div class="risk-content">
-          <h4>CBP is automating you away — on purpose</h4>
-          <p>CBP is building the CAPE system specifically to minimize the need for outside help. It's designed for importers to file their own claims. Thompson Coburn's own advisory acknowledges CAPE may reduce recovery costs. Each system update erodes the value of hiring an intermediary.</p>
+          <h4>CBP is automating you away</h4>
+          <p>CAPE is designed for self-service — each update erodes intermediary value.</p>
         </div>
       </div>
       <div class="risk">
         <div class="risk-num">3</div>
         <div class="risk-content">
-          <h4>Eligibility is binary — no gray areas</h4>
-          <p>IEEPA refund eligibility is a simple data match against CBP's own records: did you pay IEEPA tariffs or not? There's no room for "we'll find money you didn't know you had" — the government already knows exactly who paid what.</p>
+          <h4>Eligibility is binary</h4>
+          <p>No gray areas — government already knows who paid what. No "hidden money."</p>
         </div>
       </div>
       <div class="risk">
         <div class="risk-num">4</div>
         <div class="risk-content">
           <h4>Many prospects can't actually file</h4>
-          <p>Many U.S. companies that economically paid tariffs aren't the company legally listed as the importer on customs paperwork — a foreign manufacturer or freight forwarder is. When a foreign seller handles customs instead of the U.S. buyer (known as "DDP" shipping), the U.S. company has zero legal standing to claim refunds from CBP. Your sales team will waste time on companies that can't file. Must verify who the listed importer is before engaging.</p>
+          <p>If a foreign seller handled customs (DDP shipping), the U.S. company has zero standing.</p>
         </div>
       </div>
       <div class="risk">
         <div class="risk-num">5</div>
         <div class="risk-content">
-          <h4>Consumer class actions create downstream liability</h4>
-          <p>At least four class action lawsuits target companies that passed tariff costs to consumers through higher prices and now seek refunds — alleging "double recovery." Importers receiving refunds may face their own legal exposure. Client agreements need protective provisions.</p>
+          <h4>Consumer class actions</h4>
+          <p>4+ lawsuits target companies that passed tariff costs to consumers and now seek refunds.</p>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-
-<div class="section-divider"><div class="container"><span class="divider-label">The numbers</span></div></div>
-<!-- SECTION 1: THE NUMBERS -->
-<div class="section" id="sec-numbers">
-  <div class="container">
-    <div class="section-header">
-      <h2>The opportunity at a glance</h2>
-      <p>On Feb 20, 2026, the Supreme Court ruled all IEEPA tariffs unconstitutional. U.S. Customs and Border Protection (CBP) must return every dollar collected since Feb 2025.</p>
-    </div>
-
-    <div class="metrics">
-      <div class="metric-card highlight">
-        <div class="label">Total refund pool</div>
-        <div class="value">$166B+</div>
-        <div class="sub">Plus ~$650M/month in accruing interest</div>
-      </div>
-      <div class="metric-card">
-        <div class="label">Affected importers</div>
-        <div class="value">330K+</div>
-        <div class="sub">Every company that imported under IEEPA</div>
-      </div>
-      <div class="metric-card">
-        <div class="label">Import transactions to process</div>
-        <div class="value">53M</div>
-        <div class="sub">Individual import shipments (CBP calls these "entries")</div>
-      </div>
-      <div class="metric-card">
-        <div class="label">Set up for electronic refund</div>
-        <div class="value">~21K</div>
-        <div class="sub">Only ~6% of importers have registered their bank account with CBP</div>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>The refund pool is extremely top-heavy</h3>
-      <p>The largest importers — those who already have electronic bank deposits set up with CBP — account for the vast majority of the money owed. The remaining 300,000+ importers share a smaller slice of the total pool. This concentration matters for the business model.</p>
-      <div class="dist-bar-wrap">
-        <div class="dist-bar">
-          <div class="seg seg-big" style="width:78%">$120B — 78%</div>
-          <div class="seg seg-small" style="width:22%">$46B — 22%</div>
-        </div>
-        <div class="dist-legend">
-          <span><span class="dot" style="background:var(--accent)"></span> Large enrolled importers (most already have counsel)</span>
-          <span><span class="dot" style="background:var(--amber)"></span> Remaining 303K (our addressable market)</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="metrics" style="grid-template-columns: 1fr 1fr;">
-      <div class="metric-card">
-        <div class="label">Avg refund — large importer</div>
-        <div class="value">~$4.5M</div>
-        <div class="sub">Already represented by elite law firms</div>
-      </div>
-      <div class="metric-card">
-        <div class="label">Avg refund — everyone else</div>
-        <div class="value">~$152K</div>
-        <div class="sub">Our realistic per-client opportunity</div>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>What tariffs are covered?</h3>
-      <p><strong>Eligible for refund:</strong> All IEEPA-based tariffs — fentanyl/trafficking tariffs on China (up to 145%), Canada & Mexico (25%), "Liberation Day" reciprocal tariffs (10–50% on 57+ countries), tariffs on Brazil, India, Venezuela, and Russia.</p>
-      <p style="margin-top:12px"><strong>NOT eligible:</strong> Steel/aluminum/auto tariffs (Section 232), China tech tariffs (Section 301), safeguard tariffs (Section 201), and anti-dumping duties (extra charges on goods sold below fair market value). These remain in force and are NOT part of this refund.</p>
-    </div>
-  </div>
-</div>
-
-
-<div class="section-divider"><div class="container"><span class="divider-label">ERC vs. tariffs</span></div></div>
-<!-- SECTION 2: ERC vs TARIFF COMPARISON -->
-<div class="section" id="sec-erc">
-  <div class="container">
-    <div class="section-header">
-      <h2>ERC vs. tariff refunds: the real comparison</h2>
-      <p>The surface-level parallels are strong. The structural differences are what matter.</p>
-    </div>
-
-    <div class="compare-wrap">
-      <table class="compare compare-mobile">
-        <thead>
-          <tr>
-            <th>Factor</th>
-            <th class="col-erc" data-label="ERC (what we did)">ERC (what we did)</th>
-            <th class="col-tariff" data-label="Tariff refunds">Tariff refunds (this opportunity)</th>
-            <th class="col-edge" data-label="Who has the edge?">Who has the edge?</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Total money in play</td>
-            <td class="col-erc" data-label="ERC (what we did)">$300B+ in claims filed</td>
-            <td class="col-tariff" data-label="Tariff refunds">$166B+ owed by government</td>
-            <td class="col-edge" data-label="Who has the edge?"><span class="tag tag-neutral">Similar scale</span></td>
-          </tr>
-          <tr>
-            <td>Eligible businesses</td>
-            <td class="col-erc" data-label="ERC (what we did)">3.6 million employers <span class="tag tag-erc">Massive</span></td>
-            <td class="col-tariff" data-label="Tariff refunds">330,000 importers <span class="tag tag-warn">~10x smaller</span></td>
-            <td class="col-edge" data-label="Who has the edge?"><span class="tag tag-erc">ERC wins</span></td>
-          </tr>
-          <tr>
-            <td>Realistic addressable market</td>
-            <td class="col-erc" data-label="ERC (what we did)">Millions — nearly any business with payroll</td>
-            <td class="col-tariff" data-label="Tariff refunds">50,000–100,000 mid-market importers without dedicated customs teams</td>
-            <td class="col-edge" data-label="Who has the edge?"><span class="tag tag-erc">ERC wins</span></td>
-          </tr>
-          <tr>
-            <td>Determining eligibility</td>
-            <td class="col-erc" data-label="ERC (what we did)">Complex — subjective tests, gross receipts analysis, quarter-by-quarter calculations <span class="tag tag-erc">High value-add</span></td>
-            <td class="col-tariff" data-label="Tariff refunds">Binary — did you pay IEEPA tariffs? CBP already has this data <span class="tag tag-warn">Low value-add</span></td>
-            <td class="col-edge" data-label="Who has the edge?"><span class="tag tag-erc">ERC wins</span></td>
-          </tr>
-          <tr>
-            <td>Business awareness</td>
-            <td class="col-erc" data-label="ERC (what we did)">Most businesses had never heard of ERC — huge education opportunity</td>
-            <td class="col-tariff" data-label="Tariff refunds">Importers know they paid tariffs. Major media coverage. Less "discovery" needed</td>
-            <td class="col-edge" data-label="Who has the edge?"><span class="tag tag-neutral">Mixed</span></td>
-          </tr>
-          <tr>
-            <td>Existing advisors</td>
-            <td class="col-erc" data-label="ERC (what we did)">Most had no ERC-specific advisor <span class="tag tag-erc">Wide open</span></td>
-            <td class="col-tariff" data-label="Tariff refunds">Most use customs brokers (~11,500 licensed) <span class="tag tag-warn">Crowded</span></td>
-            <td class="col-edge" data-label="Who has the edge?"><span class="tag tag-erc">ERC wins</span></td>
-          </tr>
-          <tr>
-            <td>Filing complexity</td>
-            <td class="col-erc" data-label="ERC (what we did)">Paper Form 941-X, hand-processed by overwhelmed IRS</td>
-            <td class="col-tariff" data-label="Tariff refunds">CSV upload to automated CAPE portal in ACE. Designed for self-service</td>
-            <td class="col-edge" data-label="Who has the edge?"><span class="tag tag-erc">ERC wins</span></td>
-          </tr>
-          <tr>
-            <td>Processing timeline</td>
-            <td class="col-erc" data-label="ERC (what we did)">9–18 month IRS delays <span class="tag tag-erc">Long wait = fee justified</span></td>
-            <td class="col-tariff" data-label="Tariff refunds">45-day target from CBP <span class="tag tag-warn">Fast = less fee justification</span></td>
-            <td class="col-edge" data-label="Who has the edge?"><span class="tag tag-erc">ERC wins</span></td>
-          </tr>
-          <tr>
-            <td>Typical intermediary fee</td>
-            <td class="col-erc" data-label="ERC (what we did)">15–25% contingency</td>
-            <td class="col-tariff" data-label="Tariff refunds">3–20% (will compress quickly once CAPE is transparent)</td>
-            <td class="col-edge" data-label="Who has the edge?"><span class="tag tag-erc">ERC wins</span></td>
-          </tr>
-          <tr>
-            <td>Revenue per client</td>
-            <td class="col-erc" data-label="ERC (what we did)">$50,000–$500,000+ <span class="tag tag-erc">High</span></td>
-            <td class="col-tariff" data-label="Tariff refunds">$1,500–$10,000 <span class="tag tag-warn">Much lower</span></td>
-            <td class="col-edge" data-label="Who has the edge?"><span class="tag tag-erc">ERC wins</span></td>
-          </tr>
-          <tr>
-            <td>Opportunity window</td>
-            <td class="col-erc" data-label="ERC (what we did)">3+ years of claiming</td>
-            <td class="col-tariff" data-label="Tariff refunds">6–12 months before CAPE processes backlog</td>
-            <td class="col-edge" data-label="Who has the edge?"><span class="tag tag-erc">ERC wins</span></td>
-          </tr>
-          <tr>
-            <td>Lead generation</td>
-            <td class="col-erc" data-label="ERC (what we did)">Broad outbound marketing — any employer</td>
-            <td class="col-tariff" data-label="Tariff refunds">Targeted via trade data (ImportGenius, PIERS) — actual importers only <span class="tag tag-tariff">More precise</span></td>
-            <td class="col-edge" data-label="Who has the edge?"><span class="tag tag-tariff">Tariff wins</span></td>
-          </tr>
-          <tr>
-            <td>Fraud/compliance risk</td>
-            <td class="col-erc" data-label="ERC (what we did)">High — IRS opened 450+ criminal cases ($7B+ fraudulent) <span class="tag tag-warn">Dangerous</span></td>
-            <td class="col-tariff" data-label="Tariff refunds">Low — eligibility verified against CBP's own records <span class="tag tag-tariff">Cleaner</span></td>
-            <td class="col-edge" data-label="Who has the edge?"><span class="tag tag-tariff">Tariff wins</span></td>
-          </tr>
-          <tr>
-            <td>Legal certainty</td>
-            <td class="col-erc" data-label="ERC (what we did)">Program was legislatively ended; IRS began clawing back claims</td>
-            <td class="col-tariff" data-label="Tariff refunds">Supreme Court ruling is final — refunds are constitutionally mandated</td>
-            <td class="col-edge" data-label="Who has the edge?"><span class="tag tag-tariff">Tariff wins</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="card" style="border-left: 4px solid var(--amber); border-radius: 0 var(--radius-lg) var(--radius-lg) 0;">
-      <h3>Bottom line on the comparison</h3>
-      <p>ERC wins on 10 of 14 factors that matter for an intermediary business model. The tariff refund opportunity is real but structurally different — smaller market, simpler process, faster government turnaround, lower fees per client, and a much shorter window. It cannot support the same scale of intermediary operation.</p>
-    </div>
-  </div>
-</div>
-
-
-<div class="section-divider"><div class="container"><span class="divider-label">Affiliate model</span></div></div>
-<!-- SECTION 7: AFFILIATE MODEL -->
-<div class="section" id="sec-affiliate">
-  <div class="container">
-    <div class="section-header">
-      <h2>Can we run affiliates like we did with ERC?</h2>
-      <p>Short answer: yes, but the affiliate profile and economics are fundamentally different.</p>
-    </div>
-
-    <div class="card" style="border-left: 4px solid var(--green); border-radius: 0 var(--radius-lg) var(--radius-lg) 0;">
-      <h3>ERC Specialists: the benchmark</h3>
-      <p>At ERC Specialists, JZ processed <strong>$7.7 billion</strong> in claims and earned approximately <strong>$1.8 billion in commission revenue</strong>. Affiliates were paid from that $1.8B — and there was plenty to go around. A single ERC referral could pay an affiliate $10,000–$30,000, which meant virtually anyone with a business contact could be a profitable affiliate: accountants, financial advisors, business coaches, HR consultants, even friends and family.</p>
-    </div>
-
-    <div class="card" style="margin-top:20px">
-      <h3>The affiliate commission problem</h3>
-      <p>The math below shows why tariff refund affiliates need to look different. Play with the sliders to model it.</p>
-
-      <div style="margin:20px 0; padding:20px; background:var(--surface-alt); border-radius:var(--radius);">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
-          <span style="font-size:13px;color:var(--text-secondary);min-width:120px">Avg refund size</span>
-          <input type="range" min="10000" max="500000" step="5000" value="150000" id="calc-refund" style="flex:1" oninput="recalc()">
-          <span style="font-size:13px;font-weight:600;min-width:60px;text-align:right" id="calc-refund-out">$150K</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
-          <span style="font-size:13px;color:var(--text-secondary);min-width:120px">Your fee %</span>
-          <input type="range" min="3" max="20" step="1" value="5" id="calc-fee" style="flex:1" oninput="recalc()">
-          <span style="font-size:13px;font-weight:600;min-width:60px;text-align:right" id="calc-fee-out">5%</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:12px">
-          <span style="font-size:13px;color:var(--text-secondary);min-width:120px">Affiliate cut %</span>
-          <input type="range" min="10" max="50" step="5" value="30" id="calc-affcut" style="flex:1" oninput="recalc()">
-          <span style="font-size:13px;font-weight:600;min-width:60px;text-align:right" id="calc-affcut-out">30%</span>
-        </div>
-      </div>
-
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0">
-        <div style="background:var(--green-light);border-radius:var(--radius-lg);padding:20px">
-          <div style="font-size:11px;font-weight:600;color:var(--green-text);text-transform:uppercase;letter-spacing:0.5px">ERC (for comparison)</div>
-          <div style="margin-top:12px">
-            <div style="font-size:12px;color:var(--green-text)">Avg credit per client</div>
-            <div style="font-size:18px;font-weight:600;color:var(--green-text)">$250,000</div>
-          </div>
-          <div style="margin-top:8px">
-            <div style="font-size:12px;color:var(--green-text)">Fee at ~23% ($1.8B / $7.7B)</div>
-            <div style="font-size:18px;font-weight:600;color:var(--green-text)">$57,500</div>
-          </div>
-          <div style="margin-top:8px">
-            <div style="font-size:12px;color:var(--green-text)">Affiliate commission</div>
-            <div style="font-size:24px;font-weight:700;color:var(--green)" id="erc-aff-comm">$17,250</div>
-          </div>
-          <div style="margin-top:12px">
-            <div style="font-size:12px;color:var(--green-text)">Referrals to earn $50K</div>
-            <div style="font-size:24px;font-weight:700;color:var(--green)" id="erc-need-50k">3</div>
-          </div>
-        </div>
-        <div style="background:var(--amber-light);border-radius:var(--radius-lg);padding:20px">
-          <div style="font-size:11px;font-weight:600;color:var(--amber-text);text-transform:uppercase;letter-spacing:0.5px">Tariff refund</div>
-          <div style="margin-top:12px">
-            <div style="font-size:12px;color:var(--amber-text)">Avg refund per client</div>
-            <div style="font-size:18px;font-weight:600;color:var(--amber-text)" id="tar-ref-display">$150,000</div>
-          </div>
-          <div style="margin-top:8px">
-            <div style="font-size:12px;color:var(--amber-text)">Your fee</div>
-            <div style="font-size:18px;font-weight:600;color:var(--amber-text)" id="tar-fee-display">$7,500</div>
-          </div>
-          <div style="margin-top:8px">
-            <div style="font-size:12px;color:var(--amber-text)">Affiliate commission</div>
-            <div style="font-size:24px;font-weight:700;color:var(--amber)" id="tar-aff-comm">$2,250</div>
-          </div>
-          <div style="margin-top:12px">
-            <div style="font-size:12px;color:var(--amber-text)">Referrals to earn $50K</div>
-            <div style="font-size:24px;font-weight:700;color:var(--amber)" id="tar-need-50k">23</div>
-          </div>
-        </div>
-      </div>
-
-      <div style="background:var(--surface-alt);border-radius:var(--radius);padding:16px;font-size:13px;color:var(--text-secondary);line-height:1.6" id="calc-verdict">
-        At these settings, an affiliate earns <strong>$2,250 per referral</strong> — roughly 8x less than ERC. This means one-at-a-time referrers won't be motivated. You need affiliates who can deliver 5–20 referrals each.
-      </div>
-    </div>
-
-    <div class="card" style="margin-top:20px">
-      <h3>Affiliate network revenue model</h3>
-      <div style="margin:16px 0; padding:20px; background:var(--surface-alt); border-radius:var(--radius);">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
-          <span style="font-size:13px;color:var(--text-secondary);min-width:130px">Number of affiliates</span>
-          <input type="range" min="10" max="200" step="10" value="50" id="calc-numaffs" style="flex:1" oninput="recalc()">
-          <span style="font-size:13px;font-weight:600;min-width:40px;text-align:right" id="calc-numaffs-out">50</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:12px">
-          <span style="font-size:13px;color:var(--text-secondary);min-width:130px">Referrals per affiliate</span>
-          <input type="range" min="1" max="30" step="1" value="5" id="calc-refsper" style="flex:1" oninput="recalc()">
-          <span style="font-size:13px;font-weight:600;min-width:40px;text-align:right" id="calc-refsper-out">5</span>
-        </div>
-      </div>
-
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0">
-        <div class="metric-card"><div class="label">Total clients from affiliates</div><div class="value" style="font-size:22px" id="net-clients">250</div></div>
-        <div class="metric-card"><div class="label">Gross fee revenue</div><div class="value" style="font-size:22px" id="net-gross">$1.88M</div></div>
-        <div class="metric-card"><div class="label">Paid to affiliates</div><div class="value" style="font-size:22px;color:var(--amber)" id="net-affpay">$563K</div></div>
-        <div class="metric-card"><div class="label">Net after affiliate costs</div><div class="value" style="font-size:22px;color:var(--green)" id="net-kept">$1.31M</div></div>
-      </div>
-    </div>
-
-    <div class="card" style="margin-top:20px">
-      <h3>Who are the right affiliates?</h3>
-      <p>The affiliate profile shifts from "anyone with a Rolodex" to "people embedded in the import/trade ecosystem."</p>
-      <table class="compare compare-mobile" style="margin:16px 0">
-        <thead>
-          <tr><th>Affiliate type</th><th>Why they work</th><th>Expected volume</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Customs brokers (overwhelmed)</td>
-            <td>Already have client data and trust. Many don't want to handle CAPE for small clients — easier to refer out for a cut.</td>
-            <td>10–50 referrals each</td>
-          </tr>
-          <tr>
-            <td>Freight forwarders</td>
-            <td>Touch dozens of importers daily. Know who imports from IEEPA-affected countries. Low effort to identify leads.</td>
-            <td>5–20 referrals each</td>
-          </tr>
-          <tr>
-            <td>Trade/industry associations</td>
-            <td>Blast to entire membership (apparel, electronics, food importers). One partnership = hundreds of warm leads.</td>
-            <td>20–100+ referrals each</td>
-          </tr>
-          <tr>
-            <td>Business financing companies</td>
-            <td>Like Don Brown's Beacon Business Capital — they already serve businesses, some of whom import. Natural cross-sell.</td>
-            <td>5–15 referrals each</td>
-          </tr>
-          <tr>
-            <td>CPAs serving importers</td>
-            <td>Will see the tariff impact in financial statements. Can identify affected clients easily.</td>
-            <td>3–10 referrals each</td>
-          </tr>
-          <tr>
-            <td>ERC affiliates (recycled)</td>
-            <td>Already know the "government owes you money" pitch. But only useful if they happen to know importers — most won't.</td>
-            <td>0–3 referrals each</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="card" style="margin-top:20px; border-left: 4px solid var(--amber); border-radius: 0 var(--radius-lg) var(--radius-lg) 0;">
-      <h3>The honest affiliate comparison</h3>
-      <table class="compare compare-mobile" style="margin:16px 0">
-        <thead>
-          <tr><th>Metric</th><th class="col-erc" data-label="ERC (what we did)">ERC affiliates</th><th class="col-tariff" data-label="Tariff refunds">Tariff refund affiliates</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Commission per deal</td><td class="col-erc" data-label="ERC (what we did)">$10,000–$30,000</td><td class="col-tariff" data-label="Tariff refunds">$1,500–$5,000</td></tr>
-          <tr><td>Who can be an affiliate</td><td class="col-erc" data-label="ERC (what we did)">Anyone with business contacts</td><td class="col-tariff" data-label="Tariff refunds">People in trade/logistics ecosystem only</td></tr>
-          <tr><td>Affiliate motivation</td><td class="col-erc" data-label="ERC (what we did)">Life-changing money per deal</td><td class="col-tariff" data-label="Tariff refunds">Needs volume to be worthwhile</td></tr>
-          <tr><td>Lead qualification difficulty</td><td class="col-erc" data-label="ERC (what we did)">Easy — "do you have employees?"</td><td class="col-tariff" data-label="Tariff refunds">Hard — must be actual IOR, not DDP</td></tr>
-          <tr><td>Number of potential affiliates</td><td class="col-erc" data-label="ERC (what we did)">Hundreds of thousands</td><td class="col-tariff" data-label="Tariff refunds">Hundreds to low thousands</td></tr>
-          <tr><td>Revenue per affiliate</td><td class="col-erc" data-label="ERC (what we did)">$10K–$100K+ each</td><td class="col-tariff" data-label="Tariff refunds">$3K–$50K each (volume dependent)</td></tr>
-          <tr><td>Window</td><td class="col-erc" data-label="ERC (what we did)">3+ years to build network</td><td class="col-tariff" data-label="Tariff refunds">Must recruit fast — 6–12 month window</td></tr>
-          <tr><td>JZ's advantage</td><td class="col-erc" data-label="ERC (what we did)">—</td><td class="col-tariff" data-label="Tariff refunds">Affiliate infrastructure already built. CRM, tracking, payouts ready to repurpose.</td></tr>
-        </tbody>
-      </table>
-      <p style="font-size:13px;color:var(--text-secondary);margin-top:12px;line-height:1.6"><strong>Bottom line:</strong> Affiliates can contribute 25–40% of total deal flow if you recruit the right ones (brokers, forwarders, associations). But this will never be a "1,000 affiliates each sending 1 deal" model like ERC. It's a "50 strategic partners each sending 5–20 deals" model. Fewer relationships, deeper partnerships, faster timeline.</p>
-    </div>
-  </div>
-</div>
-
-
-<div class="section-divider"><div class="container"><span class="divider-label">30-day action plan</span></div></div>
-<!-- SECTION 9: ACTION PLAN -->
-<div class="section" id="sec-action">
-  <div class="container">
-    <div class="section-header">
-      <h2>If we start tomorrow: the 30-day launch plan</h2>
-      <p>Here's exactly what needs to happen, in order, with specific deliverables.</p>
-    </div>
-
-    <!-- PHASE 1 -->
-    <div class="phase">
-      <div class="phase-header">
-        <div class="phase-num p1">1</div>
-        <div>
-          <div class="phase-title">Legal and entity setup</div>
-          <div class="phase-when">Days 1–3</div>
-        </div>
-      </div>
-      <div class="action-list">
-        <div class="action-item">
-          <h5>Form the entity</h5>
-          <p>Register an LLC or S-Corp for the new venture. Keep it separate from other businesses to isolate liability. Choose a name that signals expertise (e.g., "[Name] Trade Recovery" or "[Name] Import Refund Services").</p>
-        </div>
-        <div class="action-item">
-          <h5>Engage a trade law firm as partner counsel</h5>
-          <p>Contact Thompson Coburn directly — they're already the firm JZ's contact referenced, they publish regular updates on CAPE, and they likely have a referral structure for partners who bring them clients. Also reach out to McCune Law Group (15–25% of recovery, they only get paid if the client gets paid) and Sandler Travis as backups.</p>
-          <div class="detail">Key question to ask: "Do you have a referral fee structure for firms that bring you qualified importer clients?"</div>
-        </div>
-        <div class="action-item">
-          <h5>Draft client agreements</h5>
-          <p>Have your partner counsel prepare client engagement letters that include: clear fee structure (flat fee for bank registration, percentage of recovery for refund filing), protective provisions for consumer class action exposure, a requirement to verify the client is actually the listed importer, and scope limitations.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- PHASE 2 -->
-    <div class="phase">
-      <div class="phase-header">
-        <div class="phase-num p2">2</div>
-        <div>
-          <div class="phase-title">Build the data engine</div>
-          <div class="phase-when">Days 2–7</div>
-        </div>
-      </div>
-      <div class="action-list">
-        <div class="action-item">
-          <h5>Subscribe to a trade intelligence platform</h5>
-          <p>Sign up for ImportGenius, PIERS, or Descartes Datamyne. These are databases that track every shipment entering the U.S. — who received it, what country it came from, what type of product, and estimated volumes. This is how you find importers who paid IEEPA tariffs.</p>
-          <div class="detail">Budget ~$5,000–$15,000/year depending on platform and data depth.</div>
-        </div>
-        <div class="action-item">
-          <h5>Build the prospect list</h5>
-          <p>Filter the trade data: shipments from China, Canada, Mexico, India, Brazil between Feb 2025–Feb 2026. Isolate shipments with IEEPA-specific tariff codes (the 9903.01.XX and 9903.02.XX code ranges). Rank by volume. Remove Fortune 500 companies (they have counsel). Target companies with 10–500 import shipments.</p>
-          <div class="detail">Goal: 5,000–10,000 qualified leads with verified import activity and estimated refund amounts.</div>
-        </div>
-        <div class="action-item">
-          <h5>Cross-reference bank registration status</h5>
-          <p>Use CBP's public reporting to identify which importers have NOT set up electronic bank deposits with CBP — these are the warmest leads because they literally cannot receive money without help.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- PHASE 3 -->
-    <div class="phase">
-      <div class="phase-header">
-        <div class="phase-num p3">3</div>
-        <div>
-          <div class="phase-title">Build the service stack</div>
-          <div class="phase-when">Days 3–10</div>
-        </div>
-      </div>
-      <div class="action-list">
-        <div class="action-item">
-          <h5>Service 1: Bank registration assistance (the door-opener)</h5>
-          <p>Create a streamlined process for helping importers set up their account in CBP's online system (called ACE) and register their bank account for electronic refund deposits. This is administrative paperwork — no customs license needed. Charge a flat fee ($500–$1,500) or use it as a free/low-cost lead-gen for the full service.</p>
-          <div class="detail">Pitch: "You're owed $X. The government literally cannot pay you because you're not registered. We fix that in 48 hours."</div>
-        </div>
-        <div class="action-item">
-          <h5>Service 2: Refund claim preparation and filing</h5>
-          <p>Build the workflow to take your client's import records (reports exported from CBP's system), identify which charges are IEEPA tariffs (separating them from other tariffs like steel/aluminum that aren't being refunded), clean up the data, and generate the spreadsheet file that CAPE requires for submission. Many importers paid multiple types of tariffs on the same shipment — untangling which charges are refundable is where the real value is.</p>
-          <div class="detail">Charge 3–10% of the recovered amount (you only get paid if they get paid), or flat fee per import transaction ($5–$25 each).</div>
-        </div>
-        <div class="action-item">
-          <h5>Service 3: Formal dispute filing for at-risk import transactions</h5>
-          <p>For import transactions approaching the 180-day deadline to challenge charges, file a formal dispute with CBP (called a "protest") through partner counsel. Think of this like filing an appeal before the deadline expires. This is where the law firm partnership matters — you identify the at-risk transactions, they file the legal paperwork.</p>
-        </div>
-        <div class="action-item">
-          <h5>Learn CBP's online system inside and out</h5>
-          <p>Someone on the team must physically walk through the entire process: creating an account in CBP's ACE system, registering for electronic bank deposits, exporting import records, and (once live) submitting a CAPE refund claim. Document every step, screenshot every screen. This becomes your training material and your process documentation.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- PHASE 4 -->
-    <div class="phase">
-      <div class="phase-header">
-        <div class="phase-num p4">4</div>
-        <div>
-          <div class="phase-title">Launch the sales engine</div>
-          <div class="phase-when">Days 7–14</div>
-        </div>
-      </div>
-      <div class="action-list">
-        <div class="action-item">
-          <h5>Build a simple landing page</h5>
-          <p>One-page site: "Are you owed an IEEPA tariff refund?" Lead capture form. Refund estimator tool (input: number of import shipments, average shipment value, origin country → estimated refund). Trust signals from partner law firm.</p>
-        </div>
-        <div class="action-item">
-          <h5>Outbound sales campaign</h5>
-          <p>Use the prospect list from Phase 2. Email + phone outreach to CFOs and supply chain/logistics managers. The pitch is simple: "The Supreme Court says you're owed $X. 94% of importers aren't set up to receive their refund. We handle everything."</p>
-          <div class="detail">Hire 3–5 sales development reps (SDRs) who are comfortable with the "government owes you money" pitch.</div>
-        </div>
-        <div class="action-item">
-          <h5>Channel partnerships with customs brokers</h5>
-          <p>Customs brokers are the companies that handle import paperwork for businesses. Many of the 11,500 licensed brokers are overwhelmed or don't want to handle the refund process for their smaller clients. Approach regional brokers with a referral fee arrangement — they send you their clients who need help, you handle bank registration and CAPE filing, they get a cut.</p>
-          <div class="detail">This is potentially the highest-leverage channel — brokers have trust and data but may lack bandwidth.</div>
-        </div>
-        <div class="action-item">
-          <h5>Verify the prospect is actually the listed importer</h5>
-          <p>Before any engagement, verify the prospect is the company legally listed as the importer on customs paperwork — not a company whose foreign supplier handled customs for them. Check Box 27 (Importer number) and Box 30 on the CBP import form (Form 7501). If the foreign seller handled customs, the U.S. company has no legal standing to claim — reject immediately regardless of how much they paid economically.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- PHASE 5 -->
-    <div class="phase">
-      <div class="phase-header">
-        <div class="phase-num p5">5</div>
-        <div>
-          <div class="phase-title">Scale and evolve</div>
-          <div class="phase-when">Days 14–30 and beyond</div>
-        </div>
-      </div>
-      <div class="action-list">
-        <div class="action-item">
-          <h5>CAPE launch day operations (target: mid-April)</h5>
-          <p>Be ready to submit spreadsheet files for your first batch of clients on day one. Monitor for errors closely — the first wave will surface formatting issues that affect everyone. Fast correction and resubmission = competitive advantage.</p>
-        </div>
-        <div class="action-item">
-          <h5>Develop the claim-purchase arm (optional, capital-intensive)</h5>
-          <p>For importers who want cash now rather than waiting 45 days, offer to buy their refund claims at 80–90 cents on the dollar. They get immediate cash, you collect the full refund later. Requires working capital but creates immediate revenue. Texas Capital Bank and Tariff Recovery Group are already doing this.</p>
-        </div>
-        <div class="action-item">
-          <h5>Pivot to recurring trade compliance advisory</h5>
-          <p>As the one-time refund window closes, transition clients into ongoing services: identifying other refund opportunities, tariff classification reviews, compliance audits. The tariff refund is the customer acquisition event — the recurring revenue is the real business.</p>
-          <div class="detail">This is the strategic play that makes the whole venture worthwhile even if refund fees alone are modest.</div>
-        </div>
-        <div class="action-item">
-          <h5>Monitor for Phase 2 CAPE opportunities</h5>
-          <p>Complex import transactions excluded from Phase 1 — those involving anti-dumping duties, warehouse shipments, and transactions tied to other refund programs — will need more hands-on assistance. These are higher-value, higher-complexity claims where intermediary expertise genuinely matters.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="card" style="border-left: 4px solid var(--green); border-radius: 0 var(--radius-lg) var(--radius-lg) 0;">
-      <h3>Critical first-week priorities</h3>
-      <p style="margin-bottom: 12px">If JZ decides to go, here are the five things that need to happen in the first 72 hours:</p>
-      <p><strong>1.</strong> Call Thompson Coburn and ask about their referral/partnership structure for volume partners.<br>
-      <strong>2.</strong> Subscribe to ImportGenius or PIERS and start building the prospect list.<br>
-      <strong>3.</strong> Have someone on the team walk through CBP's ACE system registration process end-to-end — create an account, register for bank deposits, export sample reports.<br>
-      <strong>4.</strong> Draft the client agreement with a requirement to verify the client is the listed importer and protective provisions for class action exposure.<br>
-      <strong>5.</strong> Recruit 2–3 sales development reps who are comfortable with the "government owes you money" pitch.</p>
-    </div>
-  </div>
-</div>
-
-
+<!-- COMPETITION -->
 <div class="section-divider"><div class="container"><span class="divider-label">Competition</span></div></div>
-<!-- SECTION 4: COMPETITION -->
 <div class="section" id="sec-competition">
   <div class="container">
     <div class="section-header">
@@ -1148,9 +377,8 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text);
         </div>
         <div class="card-body">
           <p><strong>What they built:</strong> A free "Tariff Refund Calculator" that lets any importer upload their 2025 import report and get an instant estimate of their IEEPA refund. They also launched an AI-powered "Audit Your Customs Broker" tool that reviews past filings, finds mistakes, and identifies refund opportunities. Both tools are free and available to non-Flexport customers.</p>
-          <p style="margin-top:8px"><strong>Their pitch:</strong> "See exactly what you're owed in 5 minutes." They claim to provide the fastest, most accurate way to calculate refunds. Their CEO said Flexport is "uniquely positioned" as one of the largest customs brokerages in the U.S. to help businesses of all sizes.</p>
           <p style="margin-top:8px"><strong>Their real strategy:</strong> The free calculator is a lead-generation machine. Importers upload their actual import data to use it — giving Flexport a complete picture of their import activity, tariff exposure, and current broker. It's a Trojan horse to win brokerage business, not just refund fees.</p>
-          <p style="margin-top:8px;font-size:13px;color:var(--text-secondary)"><strong>Threat level for us:</strong> High for tech-savvy importers. Low for the mid-market importers who don't even know what CBP's online systems are — Flexport's tools assume a level of customs knowledge that our target market often lacks.</p>
+          <p style="margin-top:8px;font-size:13px;color:var(--text-secondary)"><strong>Threat level for us:</strong> High for tech-savvy importers. Low for mid-market importers who don't know what CBP's online systems are.</p>
         </div>
         <button class="card-collapse-toggle">Read more ▾</button>
       </div>
@@ -1162,10 +390,9 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text);
         </div>
         <div class="card-body">
           <p><strong>Who they are:</strong> Founded by Aharon Margolin, a small-business financing veteran — not a customs expert. This is the most directly comparable company to what JZ would build.</p>
-          <p style="margin-top:8px"><strong>Their model (three tiers):</strong> (1) Free consultation and audit of your import profile. (2) Managed recovery — they handle the full CAPE filing process. (3) Claim purchase — they buy your refund claim upfront for immediate cash, then handle recovery themselves.</p>
-          <p style="margin-top:8px"><strong>Their pitch:</strong> "Don't wait for the government to process your refund. We purchase your anticipated IEEPA duty refund claim upfront — putting cash in your hands now while we handle the recovery." Their FAQ addresses every major objection: legal certainty, timeline uncertainty, fully closed import transactions.</p>
-          <p style="margin-top:8px"><strong>What's notable:</strong> They're explicitly positioning the unknown timeline as a selling point for the claim-purchase model: "CAPE is still being built, and a system processing 53 million import transactions will face technical and validation delays well beyond launch." Smart — they're using uncertainty as an urgency lever.</p>
-          <p style="margin-top:8px;font-size:13px;color:var(--text-secondary)"><strong>Threat level for us:</strong> Direct competitor in our target segment. First-mover advantage. But their team appears small and they're a new company — not an established brand. JZ's track record would be a stronger trust signal.</p>
+          <p style="margin-top:8px"><strong>Their model:</strong> (1) Free audit of your import profile. (2) Managed CAPE filing. (3) Claim purchase — they buy your refund claim upfront for immediate cash.</p>
+          <p style="margin-top:8px"><strong>What's notable:</strong> They're using timeline uncertainty as an urgency lever: "CAPE is still being built, and processing 53 million import transactions will face delays well beyond launch."</p>
+          <p style="margin-top:8px;font-size:13px;color:var(--text-secondary)"><strong>Threat level for us:</strong> Direct competitor. First-mover advantage. But small team, new company — JZ's track record would be a stronger trust signal.</p>
         </div>
         <button class="card-collapse-toggle">Read more ▾</button>
       </div>
@@ -1176,9 +403,8 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text);
           <span style="font-size:16px;font-weight:600">Quinn Emanuel — built a dedicated "Tariff Refund Task Force"</span>
         </div>
         <div class="card-body">
-          <p><strong>What they built:</strong> A full branded landing page with podcast episodes, webinar recordings, client alerts, and a clear intake flow. They have a senior partner publicly saying businesses should "act now" on tariff recovery.</p>
-          <p style="margin-top:8px"><strong>Their pitch:</strong> "Companies are confronting legal questions they have never faced before." They emphasize the complexity of deciding whether to sue, wait, or use the government's administrative refund process — positioning legal counsel as essential for any strategy.</p>
-          <p style="margin-top:8px;font-size:13px;color:var(--text-secondary)"><strong>Threat level for us:</strong> Low — they're targeting large enterprises who can afford elite law firm rates. But their messaging is worth studying for how to create urgency.</p>
+          <p><strong>What they built:</strong> A full branded landing page with podcast episodes, webinar recordings, client alerts, and a clear intake flow. A senior partner is publicly saying businesses should "act now."</p>
+          <p style="margin-top:8px;font-size:13px;color:var(--text-secondary)"><strong>Threat level for us:</strong> Low — targeting large enterprises at elite rates. But their messaging is worth studying for how to create urgency.</p>
         </div>
         <button class="card-collapse-toggle">Read more ▾</button>
       </div>
@@ -1189,220 +415,99 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text);
           <span style="font-size:16px;font-weight:600">Baker Tilly — the most polished advisory play</span>
         </div>
         <div class="card-body">
-          <p><strong>What they built:</strong> A dedicated "Tariff Refund & Recovery Services" practice with a custom dashboard that pulls together import data, broker records, and payment history. They published a "Readiness Checklist" to attract leads and are running webinars aimed at CFOs on tariff planning.</p>
-          <p style="margin-top:8px"><strong>Their pitch:</strong> "Recovery will not be automatic. Outcomes depend on the status of your import transactions, whether you've filed formal disputes, and the quality of your documentation. Organizations that act early will be better positioned." They position themselves as the serious, compliance-focused option.</p>
-          <p style="margin-top:8px"><strong>Their angle:</strong> They tie IEEPA refunds into broader business advisory — pricing strategy, inventory accounting, tax implications, and M&A considerations. This is the "use tariff refunds to win clients for ongoing advisory services" model we identified in our action plan.</p>
-          <p style="margin-top:8px;font-size:13px;color:var(--text-secondary)"><strong>Threat level for us:</strong> Medium — they're targeting companies with $100K+ in refunds and have brand credibility we'd lack at launch. But their pricing likely excludes the smaller importers we'd target.</p>
+          <p><strong>What they built:</strong> A dedicated "Tariff Refund & Recovery Services" practice with a custom dashboard. They published a "Readiness Checklist" and are running CFO-level webinars. They tie refunds into broader advisory — pricing, tax, M&A.</p>
+          <p style="margin-top:8px;font-size:13px;color:var(--text-secondary)"><strong>Threat level for us:</strong> Medium — targeting $100K+ refunds with brand credibility we'd lack. But their pricing excludes smaller importers we'd target.</p>
         </div>
         <button class="card-collapse-toggle">Read more ▾</button>
       </div>
+    </div>
 
-      <div class="card card-collapsible">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
-          <span style="font-size:11px;font-weight:600;color:var(--accent-text);background:var(--accent-light);padding:2px 8px;border-radius:6px">WEBINARS & EDUCATION</span>
-          <span style="font-size:16px;font-weight:600">What the webinar circuit is telling importers</span>
-        </div>
-        <div class="card-body">
-          <p>Multiple firms have run webinars — Holland & Knight, Citrin Cooperman/Blue Tiger International, Procopio, and several trade associations. The consistent messaging from all of them:</p>
-          <p style="margin-top:12px"><strong>1. "Act now, don't wait."</strong> Every firm leads with urgency — deadlines to file formal disputes are ticking, bank registration with CBP is mandatory, and the CAPE refund system could launch any day.</p>
-          <p style="margin-top:8px"><strong>2. "This is not automatic."</strong> They all emphasize that importers must take action. CLA specifically says "refunds won't be automatic — importers must take steps in CBP's online system (ACE)." This is the core message that creates demand for recovery services.</p>
-          <p style="margin-top:8px"><strong>3. "Work with your customs broker."</strong> Notably, several firms (CLA, Benesch) are pointing importers back to their existing brokers first, which suggests the advisory firms see themselves as the tax/accounting/legal layer on top, not the primary filing channel.</p>
-          <p style="margin-top:8px"><strong>4. "Timing is the greatest unknown."</strong> Benesch explicitly listed "knowns vs. unknowns" — and timing dominated the unknowns column. This uncertainty is what creates the opening for claim-purchase and advance services.</p>
-          <p style="margin-top:8px"><strong>5. "Watch out for downstream liability."</strong> Several firms are now warning that consumers may sue importers who received refunds but had already passed the tariff costs on to customers through higher prices. This is a new angle that wasn't part of the initial conversation.</p>
-        </div>
-        <button class="card-collapse-toggle">Read more ▾</button>
-      </div>
-
-      <div class="card" style="border-left: 4px solid var(--accent); border-radius: 0 var(--radius-lg) var(--radius-lg) 0;">
-        <h3>What this tells us about positioning</h3>
-        <p>Nobody is doing exactly what JZ would do — combining high-velocity outbound sales with trade refund processing. Flexport is tech-heavy but doesn't do outbound sales to small importers. TRG has the right model but lacks JZ's scale and track record. Baker Tilly is polished but priced for the upper mid-market. The law firms are focused on litigation, not mass administrative processing.</p>
-        <p style="margin-top:12px">The gap is exactly where we identified it: the lower mid-market importer ($10K–$500K refund) who needs someone to call them, explain the opportunity, walk them through bank registration with CBP, and handle the CAPE filing. Nobody is owning that segment with real sales firepower yet.</p>
-      </div>
+    <div class="card" style="border-left: 4px solid var(--accent); border-radius: 0 var(--radius-lg) var(--radius-lg) 0;">
+      <h3>What this tells us about positioning</h3>
+      <p>Nobody is doing exactly what JZ would do — combining high-velocity outbound sales with trade refund processing. The gap is the lower mid-market importer ($10K–$500K refund) who needs someone to call them, explain the opportunity, walk them through bank registration with CBP, and handle the CAPE filing. Nobody is owning that segment with real sales firepower yet.</p>
     </div>
   </div>
 </div>
 
-
-<div class="section-divider"><div class="container"><span class="divider-label">Timeline</span></div></div>
-<!-- SECTION 3: TIMELINE -->
-<div class="section" id="sec-timeline">
-  <div class="container">
-    <div class="section-header">
-      <h2>The timeline is moving fast</h2>
-      <p>U.S. Customs and Border Protection (CBP) is targeting mid-April but has not committed to a firm date. The window is narrowing.</p>
-    </div>
-
-    <div class="timeline">
-      <div class="tl-item done">
-        <div class="tl-date">February 20, 2026</div>
-        <div class="tl-title">Supreme Court strikes down IEEPA tariffs</div>
-        <div class="tl-desc">6-3 ruling in Learning Resources v. Trump. All IEEPA tariffs declared unconstitutional from the start.</div>
-      </div>
-      <div class="tl-item done">
-        <div class="tl-date">February 6, 2026</div>
-        <div class="tl-title">CBP stops issuing paper refund checks</div>
-        <div class="tl-desc">All refunds must now go via electronic bank deposit. This creates the bank registration bottleneck — importers who haven't signed up can't get paid.</div>
-      </div>
-      <div class="tl-item done">
-        <div class="tl-date">March 4, 2026</div>
-        <div class="tl-title">Trade court orders universal refunds</div>
-        <div class="tl-desc">Judge Eaton directs CBP to reopen and correct all affected import transactions, removing the IEEPA tariff charges.</div>
-      </div>
-      <div class="tl-item done">
-        <div class="tl-date">March 20, 2026</div>
-        <div class="tl-title">Brazil and India tariffs added</div>
-        <div class="tl-desc">Refund order expanded to cover all IEEPA-based duties, not just reciprocal/fentanyl tariffs.</div>
-      </div>
-      <div class="tl-item done">
-        <div class="tl-date">March 27, 2026</div>
-        <div class="tl-title">Fully closed import transactions included (under appeal)</div>
-        <div class="tl-desc">Judge authorizes refunds even for import transactions CBP already formally closed. Government may appeal — importers should file protective formal disputes to preserve their rights.</div>
-      </div>
-      <div class="tl-item urgent">
-        <div class="tl-date">Mid-April 2026 — TARGET (no firm date)</div>
-        <div class="tl-title">CAPE refund system targeted for launch (Phase 1)</div>
-        <div class="tl-desc">CBP said "as soon as mid-April" but has not committed to a specific date. Covers simpler import transaction types first.</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date">Q2–Q3 2026</div>
-        <div class="tl-title">Phase 2+ for complex import transactions</div>
-        <div class="tl-desc">Anti-dumping duty overlaps, warehouse withdrawals, and shipments tied to other refund programs.</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date">July 24, 2026</div>
-        <div class="tl-title">Section 122 replacement tariff expires</div>
-        <div class="tl-desc">The 10% surcharge on all imports ends unless Congress extends it. Affects importer cash flow now.</div>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>CAPE system readiness</h3>
-      <div class="metrics" style="grid-template-columns: 1fr 1fr;">
-        <div class="metric-card"><div class="label">Claim portal</div><div class="value" style="color:var(--green)">85%</div></div>
-        <div class="metric-card"><div class="label">Review & closing</div><div class="value" style="color:var(--green)">80%</div></div>
-        <div class="metric-card"><div class="label">Refund module</div><div class="value" style="color:var(--amber)">75%</div></div>
-        <div class="metric-card"><div class="label">Mass processing</div><div class="value" style="color:var(--amber)">60%</div></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
+<!-- LATEST NEWS -->
 <div class="section-divider"><div class="container"><span class="divider-label">Latest news</span></div></div>
-<!-- SECTION 0: LATEST NEWS -->
 <div class="section" id="sec-news">
   <div class="container">
     <div class="section-header">
       <h2>Latest news</h2>
-      <p id="news-updated-label">Last updated: April 1, 2026. Key developments in the IEEPA tariff refund process.</p>
+      <p id="news-updated-label">Key developments in the IEEPA tariff refund process.</p>
     </div>
 
     <!-- Dynamic news items loaded from news-data.json -->
     <div id="dynamic-news"></div>
 
-    <div style="margin: 32px 0 24px; padding-top: 24px; border-top: 1px solid var(--border);">
-      <h3 style="font-size: 16px; font-weight: 600; color: var(--text-secondary); margin-bottom: 16px;">Earlier updates</h3>
+    <!-- Key dates -->
+    <div class="card" style="margin-top:32px;">
+      <h3>Key dates</h3>
+      <div class="key-date">
+        <div class="kd-date">Mid-April</div>
+        <div class="kd-desc">CAPE refund system targeted for launch (no firm date confirmed)</div>
+      </div>
+      <div class="key-date">
+        <div class="kd-date">May 4</div>
+        <div class="kd-desc">Government deadline to appeal trade court's order on fully closed import transactions</div>
+      </div>
+      <div class="key-date">
+        <div class="kd-date">July 24</div>
+        <div class="kd-desc">Section 122 replacement tariff (10% surcharge on all imports) expires unless Congress extends</div>
+      </div>
     </div>
 
-    <div class="card" style="border-left: 4px solid var(--red); border-radius: 0 var(--radius-lg) var(--radius-lg) 0;">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
-        <span style="font-size:11px;font-weight:600;color:var(--red-text);background:var(--red-light);padding:2px 8px;border-radius:6px">BREAKING — MARCH 31</span>
-        <span style="font-size:13px;font-weight:600">CBP files fourth CAPE progress report — significant jump in completion</span>
-      </div>
-      <p><strong>Plain English:</strong> The government's refund software is being built faster now, but it's still not ready — nobody can file for refunds yet.</p>
-      <p style="margin-top:8px">U.S. Customs and Border Protection (CBP) filed its latest sworn progress report with the trade court (Court of International Trade) on March 31. The CAPE system — the online tool CBP is building so importers can claim their refunds — made meaningful progress across all four components. Think of this like tracking a construction project: these percentages show how much of the software is built, not how many claims have been processed. Nobody has filed anything yet because the system isn't open.</p>
-      <div class="metrics" style="grid-template-columns:1fr 1fr;margin:16px 0">
+    <!-- CAPE readiness -->
+    <div style="margin-top:24px;">
+      <h3 style="font-size:16px;font-weight:600;margin-bottom:16px;">CAPE system readiness</h3>
+      <div class="metrics" style="grid-template-columns:1fr 1fr;margin:0;">
         <div class="metric-card">
           <div class="label">Claim portal</div>
           <div class="value" style="font-size:22px">85% <span style="font-size:13px;color:var(--green);font-weight:600">↑ from 73%</span></div>
-          <div class="sub">Where importers will upload their claims</div>
         </div>
         <div class="metric-card">
           <div class="label">Mass processing</div>
           <div class="value" style="font-size:22px">60% <span style="font-size:13px;color:var(--green);font-weight:600">↑ from 45%</span></div>
-          <div class="sub">The engine that handles millions of claims at once</div>
         </div>
         <div class="metric-card">
           <div class="label">Review & closing</div>
           <div class="value" style="font-size:22px">80% <span style="font-size:13px;color:var(--text-tertiary);font-weight:600">unchanged</span></div>
-          <div class="sub">Where CBP checks and formally closes each import transaction</div>
         </div>
         <div class="metric-card">
           <div class="label">Refund module</div>
           <div class="value" style="font-size:22px">75% <span style="font-size:13px;color:var(--green);font-weight:600">↑ from 63%</span></div>
-          <div class="sub">The part that actually sends money back</div>
         </div>
       </div>
-      <p>Mass processing — the biggest bottleneck — jumped 15 points from 45% to 60% in just 12 days. That's the fastest improvement in any component so far. But it's still the least-complete piece and the one everything else depends on.</p>
-      <p style="margin-top:8px;font-size:13px;color:var(--text-secondary)">Source: Brandon Lord Declaration, trade court Case 1:26-cv-01259-RKE, filed March 31, 2026. Reported by Husch Blackwell / International Trade Insights.</p>
+      <p style="font-size:12px;color:var(--text-tertiary);margin-top:8px;">These percentages show how much of the software is built, not how many claims have been processed. Nobody has filed anything yet — the system isn't open.</p>
     </div>
 
-    <div class="card" style="border-left: 4px solid var(--amber); border-radius: 0 var(--radius-lg) var(--radius-lg) 0;">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
-        <span style="font-size:11px;font-weight:600;color:var(--amber-text);background:var(--amber-light);padding:2px 8px;border-radius:6px">NEW DETAIL — MARCH 31</span>
-        <span style="font-size:13px;font-weight:600">Phase 1 exclusions now clearly defined</span>
+    <!-- Kept news cards (shortened) -->
+    <div style="margin-top:32px;">
+      <div class="card" style="border-left: 4px solid var(--green); border-radius: 0 var(--radius-lg) var(--radius-lg) 0;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+          <span style="font-size:11px;font-weight:600;color:var(--green-text);background:var(--green-light);padding:2px 8px;border-radius:6px">MARCH 27</span>
+          <span style="font-size:13px;font-weight:600">12,300+ refunds rejected — importers haven't registered</span>
+        </div>
+        <p>CBP is generating refunds through its normal weekly process but can't deliver them — 12,300+ approved refunds sitting in "rejected" status because importers haven't registered for electronic deposits. This number grows every Friday.</p>
       </div>
-      <p><strong>Plain English:</strong> CBP spelled out which import shipments WON'T be handled in the first wave of refunds — and why.</p>
-      <p style="margin-top:8px">The March 31 report spells out exactly what the CAPE system will NOT handle in its first phase. Here's each exclusion and why it's excluded:</p>
-      <p style="margin-top:8px"><strong>Excluded from Phase 1:</strong></p>
-      <p style="margin-top:4px">• <strong>Import transactions flagged for reconciliation</strong> — These are shipments where the importer told CBP "I'll finalize the details later." They can't be refunded until those details are settled.</p>
-      <p style="margin-top:4px">• <strong>Shipments tied to a drawback claim</strong> — "Drawback" means the importer already applied for a different type of refund (for re-exporting goods). CBP needs to untangle which refund applies first.</p>
-      <p style="margin-top:4px">• <strong>Shipments with an open formal dispute filed with CBP</strong> — If an importer already filed a formal challenge (called a "protest") about their tariff charges, CBP won't process the refund until that dispute is resolved. Ironically, importers who proactively challenged their tariffs are now locked OUT of Phase 1.</p>
-      <p style="margin-top:4px">• <strong>Shipments not in CBP's online system (ACE)</strong> — Some older import transactions were filed on paper or in a legacy system. CBP's new refund tool can't see them.</p>
-      <p style="margin-top:4px">• <strong>Shipments with anti-dumping duties still pending</strong> — These involve extra tariffs on goods sold below fair market value. A separate government agency (Commerce Department) hasn't finished its review yet, so CBP can't close the books.</p>
-      <p style="margin-top:8px"><strong>Good news — scope expanded:</strong> Import transactions that were previously on hold (suspended, extended, or "under review" status) are now expected to be ACCEPTED in Phase 1. This is a change from earlier guidance and means more importers qualify for first-wave refunds.</p>
-      <p style="margin-top:8px"><strong>Fully closed import transactions:</strong> Shipments where CBP already formally closed the books AND the 180-day window to challenge them has expired — these are explicitly NOT in Phase 1. CBP says they "may" be addressed later but gave no timeline.</p>
-      <p style="margin-top:8px;font-size:13px;color:var(--text-secondary)"><strong>What this means for us:</strong> The exclusion list creates the Phase 2 opportunity — complex shipments that need real expertise to recover. But the protest exclusion is a new wrinkle: importers who proactively disputed their tariffs are now stuck waiting longer than those who didn't.</p>
-    </div>
 
-    <div class="card" style="border-left: 4px solid var(--accent); border-radius: 0 var(--radius-lg) var(--radius-lg) 0;">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
-        <span style="font-size:11px;font-weight:600;color:var(--accent-text);background:var(--accent-light);padding:2px 8px;border-radius:6px">KEY DETAIL — MARCH 31</span>
-        <span style="font-size:13px;font-weight:600">CBP confirms 45-day processing window after submission</span>
+      <div class="card" style="border-left: 4px solid var(--purple); border-radius: 0 var(--radius-lg) var(--radius-lg) 0;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+          <span style="font-size:11px;font-weight:600;color:var(--purple-text);background:var(--purple-light);padding:2px 8px;border-radius:6px">MARCH 27</span>
+          <span style="font-size:13px;font-weight:600">Trade court expands refund order to fully closed transactions</span>
+        </div>
+        <p>Judge Eaton authorized refunds even for transactions CBP already formally closed. Government may appeal by May 4. CBP isn't including these in Phase 1 regardless.</p>
       </div>
-      <p><strong>Plain English:</strong> Once you submit your refund claim, expect to wait up to 45 days to get your money — and CBP can send the refund to someone other than the original importer if authorized.</p>
-      <p style="margin-top:8px">CBP indicated it may take up to 45 days to review and formally close each import transaction after a CAPE claim is submitted — as long as there are no compliance red flags. This sets the expectation for the claim-to-cash timeline once the system goes live.</p>
-      <p style="margin-top:8px">Refunds will be issued to the company legally listed as the importer on customs paperwork OR a designated third party via a CBP authorization form (Form 4811). This confirms the third-party payee model works — relevant for any claim-purchase or advance service.</p>
-    </div>
-
-    <div class="card" style="border-left: 4px solid var(--green); border-radius: 0 var(--radius-lg) var(--radius-lg) 0;">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
-        <span style="font-size:11px;font-weight:600;color:var(--green-text);background:var(--green-light);padding:2px 8px;border-radius:6px">MARCH 27</span>
-        <span style="font-size:13px;font-weight:600">12,300+ refunds rejected because importers haven't set up bank deposits</span>
-      </div>
-      <p><strong>Plain English:</strong> The government is trying to send refund money to thousands of importers, but it can't — because those importers haven't registered their bank account with CBP.</p>
-      <p style="margin-top:8px">CBP's official bulletin (#68179006) confirmed that over 12,300 approved refunds have been rejected because importers haven't set up electronic bank deposits with CBP. This is up from 7,700 on March 6. The number is growing weekly as CBP closes more import transactions while importers remain unenrolled.</p>
-      <p style="margin-top:8px;font-size:13px;color:var(--text-secondary)"><strong>What this means for us:</strong> This is the bank registration service opportunity in action — real money sitting in a holding pattern because importers haven't completed a signup process. Every week that passes, more refunds stack up in "rejected" status.</p>
-    </div>
-
-    <div class="card" style="border-left: 4px solid var(--purple); border-radius: 0 var(--radius-lg) var(--radius-lg) 0;">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
-        <span style="font-size:11px;font-weight:600;color:var(--purple-text);background:var(--purple-light);padding:2px 8px;border-radius:6px">MARCH 27</span>
-        <span style="font-size:13px;font-weight:600">Trade court expands refund order to include fully closed import transactions</span>
-      </div>
-      <p><strong>Plain English:</strong> The court said even importers who missed the window to challenge their tariff charges can still get refunds — but the government might appeal this, and CBP isn't including these in the first wave regardless.</p>
-      <p style="margin-top:8px">Judge Eaton amended the trade court order to authorize CBP to reopen and correct IEEPA tariff charges even for import transactions that were already formally closed — including ones where the 180-day window to file a formal dispute had already expired. This is expansive and good for importers, but the government has until May 4 to appeal. CBP's March 31 filing confirmed they are NOT including these transactions in Phase 1 regardless.</p>
-    </div>
-
-    <div class="card" style="border-left: 4px solid var(--text-tertiary); border-radius: 0 var(--radius-lg) var(--radius-lg) 0;">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
-        <span style="font-size:11px;font-weight:600;color:var(--text-secondary);background:var(--surface-alt);padding:2px 8px;border-radius:6px">WATCH LIST</span>
-        <span style="font-size:13px;font-weight:600">Upcoming dates and events</span>
-      </div>
-      <p><strong>Mid-April 2026:</strong> CAPE refund system targeted for launch (still no firm date confirmed).</p>
-      <p style="margin-top:4px"><strong>May 4, 2026:</strong> Government deadline to appeal the trade court's order covering fully closed import transactions. If appealed, this creates uncertainty for a large chunk of refunds.</p>
-      <p style="margin-top:4px"><strong>July 24, 2026:</strong> The Section 122 replacement tariff (a 10% surcharge on all imports) expires unless Congress extends it.</p>
-      <p style="margin-top:4px"><strong>Over 3,000 lawsuits filed</strong> by individual importers in the trade court as of late March.</p>
     </div>
   </div>
 </div>
 
-
 <!-- FOOTER -->
 <div class="footer">
   <div class="container">
-    <p>Prepared March 31, 2026 — Research based on CBP sworn court declarations (March 6, 12, 19), trade court orders in Atmus Filtration Inc. v. United States, CBP bulletins, and analysis from BDO, Kelley Drye, Greenberg Traurig, Grassi, Skadden, Orrick, Flexport, and Supply Chain Dive.<br>
-    Key figures verified: $166B pool, 330K+ importers, 53M import transactions (CBP declaration); CAPE percentages as of March 19 court filing; 12,300+ rejected refunds (CBP bulletin #68179006, March 27); Learning Resources Inc. v. Trump, 6-3 decision, Feb 20 2026 (Supreme Court).<br>
+    <p>Prepared March 31, 2026 — Research based on CBP sworn court declarations, trade court orders in Atmus Filtration Inc. v. United States, CBP bulletins, and analysis from BDO, Kelley Drye, Greenberg Traurig, Grassi, Skadden, Orrick, Flexport, and Supply Chain Dive.<br>
+    Key figures verified: $166B pool, 330K+ importers, 53M import transactions (CBP declaration); CAPE percentages as of March 31 court filing; 12,300+ rejected refunds (CBP bulletin #68179006, March 27); Learning Resources Inc. v. Trump, 6-3 decision, Feb 20 2026 (Supreme Court).<br>
     This document is for internal strategic evaluation only. Not legal or financial advice.</p>
   </div>
 </div>
@@ -1491,12 +596,13 @@ function closeNav() { document.getElementById('nav-overlay').classList.remove('o
 
 // Update sticky header label on scroll
 (function() {
-  var sectionNames = {};
-  document.querySelectorAll('.section[id]').forEach(function(s) {
-    var h2 = s.querySelector('.section-header h2');
-    if (h2) sectionNames[s.id] = h2.textContent;
-  });
-  sectionNames['sec-tldr'] = 'Executive Summary';
+  var sectionNames = {
+    'sec-verdict': 'The verdict',
+    'sec-revenue': 'Revenue model',
+    'sec-risks': 'Key risks',
+    'sec-competition': 'Competition',
+    'sec-news': 'Latest news'
+  };
   var headerLabel = document.querySelector('#sticky-header .section-label');
   if ('IntersectionObserver' in window && headerLabel) {
     var observer = new IntersectionObserver(function(entries) {
@@ -1515,7 +621,7 @@ function closeNav() { document.getElementById('nav-overlay').classList.remove('o
   var btn = document.getElementById('back-to-top');
   if (btn) {
     window.addEventListener('scroll', function() {
-      btn.classList.toggle('visible', window.scrollY > 600);
+      btn.classList.toggle('visible', window.scrollY > 400);
     });
     btn.addEventListener('click', function() { window.scrollTo({top:0,behavior:'smooth'}); });
   }
@@ -1529,57 +635,6 @@ document.querySelectorAll('.card-collapse-toggle').forEach(function(btn) {
     this.textContent = card.classList.contains('expanded') ? 'Show less ▴' : 'Read more ▾';
   });
 });
-
-function fmtDollar(n) {
-  if (n >= 1000000) return '$' + (Math.round(n / 100000) / 10) + 'M';
-  if (n >= 1000) return '$' + Math.round(n / 1000) + 'K';
-  return '$' + Math.round(n);
-}
-
-function recalc() {
-  var refund = +document.getElementById('calc-refund').value;
-  var fee = +document.getElementById('calc-fee').value;
-  var affcut = +document.getElementById('calc-affcut').value;
-  var numaffs = +document.getElementById('calc-numaffs').value;
-  var refsper = +document.getElementById('calc-refsper').value;
-
-  document.getElementById('calc-refund-out').textContent = fmtDollar(refund);
-  document.getElementById('calc-fee-out').textContent = fee + '%';
-  document.getElementById('calc-affcut-out').textContent = affcut + '%';
-  document.getElementById('calc-numaffs-out').textContent = numaffs;
-  document.getElementById('calc-refsper-out').textContent = refsper;
-
-  var feeAmt = refund * fee / 100;
-  var affComm = feeAmt * affcut / 100;
-  var ercFee = 57500;
-  var ercComm = ercFee * affcut / 100;
-
-  document.getElementById('tar-ref-display').textContent = fmtDollar(refund);
-  document.getElementById('tar-fee-display').textContent = fmtDollar(feeAmt);
-  document.getElementById('tar-aff-comm').textContent = fmtDollar(affComm);
-  document.getElementById('erc-aff-comm').textContent = fmtDollar(ercComm);
-
-  var ercNeed = Math.ceil(50000 / ercComm);
-  var tarNeed = affComm > 0 ? Math.ceil(50000 / affComm) : 999;
-  document.getElementById('erc-need-50k').textContent = ercNeed;
-  document.getElementById('tar-need-50k').textContent = tarNeed;
-
-  var ratio = affComm > 0 ? Math.round(ercComm / affComm) : 99;
-  var verdict = 'At these settings, an affiliate earns <strong>' + fmtDollar(affComm) + ' per referral</strong> — roughly ' + ratio + 'x less than ERC. ';
-  if (affComm < 1500) verdict += 'This commission is too low for most individual referrers. You need affiliates who can deliver 10+ referrals each — think customs brokers, freight forwarders, or trade associations.';
-  else if (affComm < 5000) verdict += 'Workable for affiliates with existing importer relationships (brokers, supply chain consultants, industry associations) who can refer in volume.';
-  else verdict += 'At this fee level, even individual referrers could be motivated — but only sustainable if your fee percentage holds up once CAPE makes the process transparent.';
-  document.getElementById('calc-verdict').innerHTML = verdict;
-
-  var totClients = numaffs * refsper;
-  var totRev = totClients * feeAmt;
-  var totAff = totClients * affComm;
-  var totNet = totRev - totAff;
-  document.getElementById('net-clients').textContent = totClients.toLocaleString();
-  document.getElementById('net-gross').textContent = fmtDollar(totRev);
-  document.getElementById('net-affpay').textContent = fmtDollar(totAff);
-  document.getElementById('net-kept').textContent = fmtDollar(totNet);
-}
 </script>
 </body>
 </html>
