@@ -69,7 +69,7 @@ def call_claude_api():
         headers={
             "Content-Type": "application/json",
             "x-api-key": API_KEY,
-            "anthropic-version": "2025-01-01"
+            "anthropic-version": "2023-06-01"
         },
         method="POST"
     )
@@ -124,6 +124,12 @@ def parse_news_items(text):
         return []
 
 
+def strip_citations(text):
+    """Remove <cite ...>...</cite> tags, keeping inner text."""
+    import re
+    return re.sub(r'<cite[^>]*>(.*?)</cite>', r'\1', text, flags=re.DOTALL)
+
+
 def main():
     print(f"Fetching latest IEEPA tariff refund news at {datetime.now(timezone.utc).isoformat()}...")
 
@@ -143,6 +149,9 @@ def main():
     required_fields = ["headline", "summary"]
     for item in items:
         if all(item.get(f) for f in required_fields):
+            # Strip citation markup from summaries
+            item["summary"] = strip_citations(item["summary"])
+            item["headline"] = strip_citations(item["headline"])
             # Ensure defaults
             item.setdefault("date", datetime.now(timezone.utc).strftime("%B %d, %Y").upper())
             item.setdefault("badge", "UPDATE")

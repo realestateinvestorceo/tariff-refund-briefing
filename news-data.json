@@ -1,69 +1,53 @@
 {
-  "last_updated": "2026-04-01T13:22:32.979568+00:00",
+  "last_updated": "2026-04-07T14:30:20.849131+00:00",
   "items": [
     {
-      "date": "MARCH 31, 2026",
+      "date": "APRIL 7, 2026",
       "badge": "BREAKING",
       "category": "breaking",
-      "headline": "CBP Files Latest CAPE Progress Report: 85% Portal Complete",
-      "summary": "CBP filed its March 31 status update showing the CAPE Claim Portal is now 85% complete, up from previous reports. The Mass Processing component remains limited to unliquidated entries and those within the 90-day voluntary reliquidation period. Judge Eaton continues to suspend the immediate refund order pending system completion.",
-      "source": "International Trade Insights"
+      "headline": "CBP CAPE System 85% Complete - April 20 Launch Confirmed by CIT",
+      "summary": "Court of International Trade Judge Richard Eaton confirmed CBP is \"on track to meet the April 20, 2026 deadline\" for Phase 1 CAPE launch. System components now 60-85% complete with claim portal leading at 85%. CBP must file next status report April 14 for closed conference review. This marks final confirmation of imminent launch timeline.",
+      "source": "Thompson Hine SmarTrade / CIT Order April 1, 2026"
     },
     {
-      "date": "MARCH 27, 2026",
-      "badge": "MAJOR UPDATE",
-      "category": "breaking",
-      "headline": "CIT Expands Refund Order to Include Finally Liquidated Entries",
-      "summary": "Judge Eaton amended his March 20 order to include entries with final liquidations in IEEPA refund coverage. This means all entries subject to IEEPA duties are now entitled to refunds, regardless of their liquidation status or whether protests were filed within the 180-day window.",
-      "source": "Greenberg Traurig & Thompson Hine"
-    },
-    {
-      "date": "MARCH 26, 2026",
-      "badge": "WATCH LIST",
-      "category": "watch",
-      "headline": "Wave of Consumer Class Actions Target Tariff Pass-Through",
-      "summary": "Major retailers including Costco, Fabletics, FedEx, and EssilorLuxottica face class action lawsuits alleging they passed IEEPA tariff costs to consumers but will retain government refunds. Plaintiffs seek restitution under unjust enrichment theories. Cases filed in multiple federal districts.",
-      "source": "D&O Diary & Covington"
-    },
-    {
-      "date": "MARCH 25, 2026",
+      "date": "APRIL 6, 2026",
       "badge": "UPDATE",
-      "category": "detail",
-      "headline": "Electronic ACH Refund Setup Critical as April Launch Nears",
-      "summary": "CBP continues emphasizing that all IEEPA refunds will be electronic-only through ACH. Roughly 21,000 importers have registered for digital returns. Companies without ACH enrollment will have refund requests denied. CBP targeting late April 2026 for CAPE system launch.",
-      "source": "Supply Chain Dive & CLA"
+      "category": "update",
+      "headline": "Phase 1 Covers 63% of IEEPA Entries - 45-Day Processing Confirmed",
+      "summary": "CBP's March 31 declaration reveals Phase 1 will process approximately 63% of IEEPA entries including unliquidated entries and those within 90-day voluntary reliquidation period. Processing time confirmed at up to 45 days from acceptance unless compliance concerns trigger further review. Finally liquidated entries deferred to Phase 2 with no timeline.",
+      "source": "Multiple law firm analyses of CBP March 31 Declaration"
     },
     {
-      "date": "MARCH 24, 2026",
+      "date": "APRIL 5, 2026",
+      "badge": "CRITICAL",
+      "category": "detail",
+      "headline": "92% of Eligible Importers Still Not ACH-Enrolled for Electronic Refunds",
+      "summary": "Only 26,664 of 330,000 eligible importers have completed ACE+ACH enrollment required for electronic refunds. CBP confirmed all refunds will be electronic-only with no paper checks. Unenrolled importers will have refunds rejected and placed in reject status until enrollment completed. $23M in statutory interest accrues daily.",
+      "source": "ClaimYourTariffs / CBP Data March 2026"
+    },
+    {
+      "date": "APRIL 3, 2026",
       "badge": "NEW DETAIL",
       "category": "detail",
-      "headline": "CAPE Form 4811 Enables Third-Party Refund Designations",
-      "summary": "CBP clarifies that refunds can be issued to parties designated by importers using CBP Form 4811. This feature could be critical for tariff refund claim buyers to receive refunds directly for claims they have purchased, potentially creating a secondary market for refund rights.",
-      "source": "Orrick & Troutman Pepper"
+      "headline": "CAPE System Expanded to Include Suspended/Extended/Under Review Entries",
+      "summary": "CBP expanded Phase 1 scope beyond unliquidated entries to include those with liquidation status of 'Suspended,' 'Extended,' or 'Under Review.' For these entries, IEEPA duties will be removed but refunds delayed until normal liquidation completion. Entries with AD/CVD complications and drawback claims remain excluded from Phase 1.",
+      "source": "Aprio / Baker Tilly Analysis April 2026"
     },
     {
-      "date": "MARCH 12, 2026",
+      "date": "APRIL 1, 2026",
       "badge": "POSITIVE",
       "category": "positive",
-      "headline": "States Challenge Section 122 Replacement Tariffs as Illegal",
-      "summary": "24 states sued the Trump administration arguing the new 10% Section 122 replacement tariffs are also illegal. New York's AG stated the administration lacks authority for these tariffs. If successful, this could lead to additional refund opportunities beyond IEEPA duties.",
-      "source": "SCOTUSblog & Freshfields"
+      "headline": "CIT Judge Endorses CBP Progress - No Appeal Deadline Extension",
+      "summary": "Judge Eaton issued order confirming CBP makes \"satisfactory progress\" on CAPE development and endorsed April 20 launch timeline. Court rejected any delays and maintained pressure on CBP to deliver. Government appeal deadline for CIT's broad refund order remains May 4, 2026, creating urgency for importers to preserve rights.",
+      "source": "Court of International Trade Order April 1, 2026"
     },
     {
-      "date": "MARCH 11, 2026",
-      "badge": "LEGAL",
+      "date": "MARCH 31, 2026",
+      "badge": "WATCH LIST",
       "category": "legal",
-      "headline": "Senate Dems Introduce 'Tariff Refund Act of 2026'",
-      "summary": "Senate Democrats introduced legislation requiring the administration to refund all IEEPA tariff revenue with interest within 180 days, prioritizing small businesses. The bill faces uncertain prospects given potential presidential veto and partisan divisions in Congress.",
-      "source": "Troutman Pepper"
-    },
-    {
-      "date": "MARCH 4, 2026",
-      "badge": "LEGAL",
-      "category": "legal",
-      "headline": "Judge Eaton Designated Sole IEEPA Refund Case Handler",
-      "summary": "CIT Chief Judge designated Judge Richard Eaton as the only judge to hear all IEEPA refund cases going forward. This consolidation aims to streamline the process for businesses seeking refunds and ensures consistent rulings across the estimated 2,000+ pending cases.",
-      "source": "Bradley & Holland Knight"
+      "headline": "Finally Liquidated Entries Still Uncertain Despite CIT March 27 Order",
+      "summary": "While CIT ordered CBP to process finally liquidated entries, CBP's March 31 declaration confirms these are excluded from Phase 1 and deferred to future phase with no timeline. Legal uncertainty remains whether CBP has authority to reliquidate beyond 90-day window. Importers advised to continue filing protests to preserve rights.",
+      "source": "Kelley Drye / Troutman Pepper Analysis March 31, 2026"
     }
   ]
 }
