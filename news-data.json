@@ -1,53 +1,53 @@
 {
-  "last_updated": "2026-04-07T14:30:20.849131+00:00",
+  "last_updated": "2026-04-07T14:33:44.979007+00:00",
   "items": [
     {
-      "date": "APRIL 7, 2026",
+      "date": "APRIL 1, 2026",
       "badge": "BREAKING",
       "category": "breaking",
-      "headline": "CBP CAPE System 85% Complete - April 20 Launch Confirmed by CIT",
-      "summary": "Court of International Trade Judge Richard Eaton confirmed CBP is \"on track to meet the April 20, 2026 deadline\" for Phase 1 CAPE launch. System components now 60-85% complete with claim portal leading at 85%. CBP must file next status report April 14 for closed conference review. This marks final confirmation of imminent launch timeline.",
-      "source": "Thompson Hine SmarTrade / CIT Order April 1, 2026"
+      "headline": "CIT Endorses CAPE Phase 1 for April 20 Launch",
+      "summary": "Senior Judge Richard Eaton approved CBP's progress on the CAPE refund system, confirming the April 20, 2026 rollout date. CAPE components are now 60-85% complete and will process 63% of IEEPA entries. The system will handle unliquidated entries and those within the 90-day voluntary reliquidation period with a 45-day processing window.",
+      "source": "Court of International Trade"
     },
     {
-      "date": "APRIL 6, 2026",
+      "date": "APRIL 2, 2026",
       "badge": "UPDATE",
       "category": "update",
-      "headline": "Phase 1 Covers 63% of IEEPA Entries - 45-Day Processing Confirmed",
-      "summary": "CBP's March 31 declaration reveals Phase 1 will process approximately 63% of IEEPA entries including unliquidated entries and those within 90-day voluntary reliquidation period. Processing time confirmed at up to 45 days from acceptance unless compliance concerns trigger further review. Finally liquidated entries deferred to Phase 2 with no timeline.",
-      "source": "Multiple law firm analyses of CBP March 31 Declaration"
-    },
-    {
-      "date": "APRIL 5, 2026",
-      "badge": "CRITICAL",
-      "category": "detail",
-      "headline": "92% of Eligible Importers Still Not ACH-Enrolled for Electronic Refunds",
-      "summary": "Only 26,664 of 330,000 eligible importers have completed ACE+ACH enrollment required for electronic refunds. CBP confirmed all refunds will be electronic-only with no paper checks. Unenrolled importers will have refunds rejected and placed in reject status until enrollment completed. $23M in statutory interest accrues daily.",
-      "source": "ClaimYourTariffs / CBP Data March 2026"
+      "headline": "CBP Confirms 45-Day CAPE Processing Timeline",
+      "summary": "CBP filed updated status showing CAPE will take up to 45 days to process refunds after entry liquidation. Nearly 27,000 importers (78% of affected entries worth $120 billion) have enrolled for electronic refunds. Refunds will only be delivered after entries liquidate, creating potential delays for importers.",
+      "source": "U.S. Customs and Border Protection"
     },
     {
       "date": "APRIL 3, 2026",
       "badge": "NEW DETAIL",
       "category": "detail",
-      "headline": "CAPE System Expanded to Include Suspended/Extended/Under Review Entries",
-      "summary": "CBP expanded Phase 1 scope beyond unliquidated entries to include those with liquidation status of 'Suspended,' 'Extended,' or 'Under Review.' For these entries, IEEPA duties will be removed but refunds delayed until normal liquidation completion. Entries with AD/CVD complications and drawback claims remain excluded from Phase 1.",
-      "source": "Aprio / Baker Tilly Analysis April 2026"
+      "headline": "CAPE Phase 1 Expands to Include Suspended Entries",
+      "summary": "CBP expanded Phase 1 eligibility to include entries marked 'Suspended,' 'Extended,' or 'Under Review,' increasing coverage from basic unliquidated entries. The claim portal is now 85% complete, but finally liquidated entries remain excluded pending Phase 2 development with no announced timeline.",
+      "source": "Trade Law Firms"
     },
     {
-      "date": "APRIL 1, 2026",
-      "badge": "POSITIVE",
-      "category": "positive",
-      "headline": "CIT Judge Endorses CBP Progress - No Appeal Deadline Extension",
-      "summary": "Judge Eaton issued order confirming CBP makes \"satisfactory progress\" on CAPE development and endorsed April 20 launch timeline. Court rejected any delays and maintained pressure on CBP to deliver. Government appeal deadline for CIT's broad refund order remains May 4, 2026, creating urgency for importers to preserve rights.",
-      "source": "Court of International Trade Order April 1, 2026"
+      "date": "APRIL 6, 2026",
+      "badge": "WATCH LIST",
+      "category": "watch",
+      "headline": "Section 232 Metals Framework Overhaul Takes Effect",
+      "summary": "New unified Section 232 tariff structure effective today consolidates steel, aluminum and copper tariffs. Steel faces 50% ad valorem rates, while derivative articles require 15% steel content minimum. This affects CAPE processing for entries with multiple tariff types and may complicate refund calculations.",
+      "source": "Presidential Proclamation"
     },
     {
       "date": "MARCH 31, 2026",
-      "badge": "WATCH LIST",
+      "badge": "POSITIVE",
+      "category": "positive",
+      "headline": "Finally Liquidated Entries Now Covered by CIT Order",
+      "summary": "Judge Eaton's March 27 amended order extends refund mandate to finally liquidated entries, ensuring no importers are time-barred from IEEPA refunds. CBP committed to addressing these in future CAPE phases but provided no development timeline for Phase 2 functionality.",
+      "source": "Court of International Trade"
+    },
+    {
+      "date": "APRIL 5, 2026",
+      "badge": "LEGAL",
       "category": "legal",
-      "headline": "Finally Liquidated Entries Still Uncertain Despite CIT March 27 Order",
-      "summary": "While CIT ordered CBP to process finally liquidated entries, CBP's March 31 declaration confirms these are excluded from Phase 1 and deferred to future phase with no timeline. Legal uncertainty remains whether CBP has authority to reliquidate beyond 90-day window. Importers advised to continue filing protests to preserve rights.",
-      "source": "Kelley Drye / Troutman Pepper Analysis March 31, 2026"
+      "headline": "24 States Challenge Section 122 Replacement Tariffs",
+      "summary": "State attorneys general filed suit arguing Section 122 balance-of-payments requirements cannot be met in post-1976 floating exchange era. They claim Trump is conflating trade deficits with balance-of-payments crises. A ruling against Section 122 could create new refund pool when tariffs expire July 24, 2026.",
+      "source": "Court of International Trade"
     }
   ]
 }
