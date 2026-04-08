@@ -1,53 +1,61 @@
 {
-  "last_updated": "2026-04-07T14:33:44.979007+00:00",
+  "last_updated": "2026-04-08T13:49:28.094244+00:00",
   "items": [
     {
-      "date": "APRIL 1, 2026",
+      "date": "APRIL 8, 2026",
       "badge": "BREAKING",
       "category": "breaking",
-      "headline": "CIT Endorses CAPE Phase 1 for April 20 Launch",
-      "summary": "Senior Judge Richard Eaton approved CBP's progress on the CAPE refund system, confirming the April 20, 2026 rollout date. CAPE components are now 60-85% complete and will process 63% of IEEPA entries. The system will handle unliquidated entries and those within the 90-day voluntary reliquidation period with a 45-day processing window.",
-      "source": "Court of International Trade"
-    },
-    {
-      "date": "APRIL 2, 2026",
-      "badge": "UPDATE",
-      "category": "update",
-      "headline": "CBP Confirms 45-Day CAPE Processing Timeline",
-      "summary": "CBP filed updated status showing CAPE will take up to 45 days to process refunds after entry liquidation. Nearly 27,000 importers (78% of affected entries worth $120 billion) have enrolled for electronic refunds. Refunds will only be delivered after entries liquidate, creating potential delays for importers.",
-      "source": "U.S. Customs and Border Protection"
-    },
-    {
-      "date": "APRIL 3, 2026",
-      "badge": "NEW DETAIL",
-      "category": "detail",
-      "headline": "CAPE Phase 1 Expands to Include Suspended Entries",
-      "summary": "CBP expanded Phase 1 eligibility to include entries marked 'Suspended,' 'Extended,' or 'Under Review,' increasing coverage from basic unliquidated entries. The claim portal is now 85% complete, but finally liquidated entries remain excluded pending Phase 2 development with no announced timeline.",
-      "source": "Trade Law Firms"
-    },
-    {
-      "date": "APRIL 6, 2026",
-      "badge": "WATCH LIST",
-      "category": "watch",
-      "headline": "Section 232 Metals Framework Overhaul Takes Effect",
-      "summary": "New unified Section 232 tariff structure effective today consolidates steel, aluminum and copper tariffs. Steel faces 50% ad valorem rates, while derivative articles require 15% steel content minimum. This affects CAPE processing for entries with multiple tariff types and may complicate refund calculations.",
-      "source": "Presidential Proclamation"
-    },
-    {
-      "date": "MARCH 31, 2026",
-      "badge": "POSITIVE",
-      "category": "positive",
-      "headline": "Finally Liquidated Entries Now Covered by CIT Order",
-      "summary": "Judge Eaton's March 27 amended order extends refund mandate to finally liquidated entries, ensuring no importers are time-barred from IEEPA refunds. CBP committed to addressing these in future CAPE phases but provided no development timeline for Phase 2 functionality.",
-      "source": "Court of International Trade"
+      "headline": "CAPE Launch Date Confirmed: CBP On Track for April 20 Deployment",
+      "summary": "Court of International Trade confirmed CBP is making 'satisfactory progress' on CAPE system development, with all four components now 60-85% complete. CBP remains on track to launch Phase 1 by April 20, 2026, covering 63% of IEEPA-affected entries initially.",
+      "source": "Thompson Hine SmarTrade"
     },
     {
       "date": "APRIL 5, 2026",
+      "badge": "UPDATE",
+      "category": "update",
+      "headline": "Phase 1 Limitations Confirmed: Finally Liquidated Entries Deferred",
+      "summary": "CBP's March 31 declaration confirms Phase 1 will exclude finally liquidated entries and complex scenarios like AD/CVD cases. These will be addressed in future phases with no timeline provided. Importers should continue filing protests to preserve rights.",
+      "source": "Baker Tilly"
+    },
+    {
+      "date": "APRIL 2, 2026",
+      "badge": "DETAIL",
+      "category": "detail",
+      "headline": "Electronic Refund Requirements: Only 26,664 of 330,000 Enrolled",
+      "summary": "CBP data shows 92% of eligible importers lack required ACE/ACH enrollment for electronic refunds. Without proper setup, refunds will be rejected. Current enrollees represent 78% of entries by value ($120 billion) but small fraction of total importers.",
+      "source": "Supply Chain Dive"
+    },
+    {
+      "date": "APRIL 1, 2026",
+      "badge": "POSITIVE",
+      "category": "positive",
+      "headline": "CIT Endorses CBP Progress, No Government Appeal Filed Yet",
+      "summary": "Judge Eaton issued order praising CBP's 'satisfactory progress' on CAPE development. Government has 60-day window to appeal CIT's broad refund order but no appeal filed yet. Next CBP status report due April 14 with closed conference same day.",
+      "source": "Dickinson Wright"
+    },
+    {
+      "date": "MARCH 31, 2026",
+      "badge": "NEW DETAIL",
+      "category": "detail",
+      "headline": "45-Day Processing Window Confirmed for Accepted Claims",
+      "summary": "CBP committed to processing refund requests within 45 days of acceptance, unless compliance concerns require additional review. Refunds will be consolidated by liquidation date and importer, issued electronically only.",
+      "source": "Kelley Drye"
+    },
+    {
+      "date": "MARCH 27, 2026",
       "badge": "LEGAL",
       "category": "legal",
-      "headline": "24 States Challenge Section 122 Replacement Tariffs",
-      "summary": "State attorneys general filed suit arguing Section 122 balance-of-payments requirements cannot be met in post-1976 floating exchange era. They claim Trump is conflating trade deficits with balance-of-payments crises. A ruling against Section 122 could create new refund pool when tariffs expire July 24, 2026.",
-      "source": "Court of International Trade"
+      "headline": "CIT Expands Refund Scope to Include Finally Liquidated Entries",
+      "summary": "Amended court order now requires CBP to reliquidate even finally liquidated entries 'without regard' to IEEPA duties. This significantly expands refund eligibility beyond the 90-day voluntary reliquidation window, though Phase 1 won't handle these cases.",
+      "source": "Forvis Mazars"
+    },
+    {
+      "date": "MARCH 12, 2026",
+      "badge": "WATCH LIST",
+      "category": "watch",
+      "headline": "Interest Accrual Continues: $23M Daily Across All Eligible Importers",
+      "summary": "Statutory interest continues accruing at approximately $650 million monthly across all IEEPA tariff payments. Total potential refund pool exceeds $170 billion with interest. Timing remains subject to court approval and potential government appeals.",
+      "source": "ClaimYourTariffs"
     }
   ]
 }
