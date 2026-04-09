@@ -1,61 +1,61 @@
 {
-  "last_updated": "2026-04-08T13:49:28.094244+00:00",
+  "last_updated": "2026-04-09T14:00:05.916716+00:00",
   "items": [
     {
-      "date": "APRIL 8, 2026",
+      "date": "APRIL 9, 2026",
       "badge": "BREAKING",
       "category": "breaking",
-      "headline": "CAPE Launch Date Confirmed: CBP On Track for April 20 Deployment",
-      "summary": "Court of International Trade confirmed CBP is making 'satisfactory progress' on CAPE system development, with all four components now 60-85% complete. CBP remains on track to launch Phase 1 by April 20, 2026, covering 63% of IEEPA-affected entries initially.",
-      "source": "Thompson Hine SmarTrade"
+      "headline": "CAPE System Launch Expected April 20 as CBP Completes Final Testing",
+      "summary": "Phase 1 of CBP's CAPE system is expected to launch by April 20, 2026, with CBP targeting that date for accepting refund claims. The claim portal is 85% complete and in testing, while development continues on other components. Only importers with complete ACE and ACH enrollment will be able to submit claims when the portal opens.",
+      "source": "Multiple industry sources"
     },
     {
-      "date": "APRIL 5, 2026",
+      "date": "APRIL 7, 2026",
+      "badge": "NEW DETAIL",
+      "category": "detail",
+      "headline": "CBP Reports 45-Day Processing Timeline for Accepted CAPE Claims",
+      "summary": "CBP has stated it will process accepted refund requests within 45 days from the date of acceptance, unless there is a compliance concern requiring further review. CBP estimates Phase 1 functionality will process approximately 63% of entries for which IEEPA tariff refunds are due. The system will handle unliquidated entries and those within the 90-day voluntary reliquidation period first.",
+      "source": "Kelley Drye, Cherry Bekaert analysis"
+    },
+    {
+      "date": "APRIL 3, 2026",
       "badge": "UPDATE",
       "category": "update",
-      "headline": "Phase 1 Limitations Confirmed: Finally Liquidated Entries Deferred",
-      "summary": "CBP's March 31 declaration confirms Phase 1 will exclude finally liquidated entries and complex scenarios like AD/CVD cases. These will be addressed in future phases with no timeline provided. Importers should continue filing protests to preserve rights.",
-      "source": "Baker Tilly"
-    },
-    {
-      "date": "APRIL 2, 2026",
-      "badge": "DETAIL",
-      "category": "detail",
-      "headline": "Electronic Refund Requirements: Only 26,664 of 330,000 Enrolled",
-      "summary": "CBP data shows 92% of eligible importers lack required ACE/ACH enrollment for electronic refunds. Without proper setup, refunds will be rejected. Current enrollees represent 78% of entries by value ($120 billion) but small fraction of total importers.",
-      "source": "Supply Chain Dive"
+      "headline": "92% of Eligible Importers Still Not Enrolled for Electronic Refunds",
+      "summary": "More than 26,000 importers have enrolled in ACH refunds, representing 78% of impacted entries and $120 billion in duty value, but this leaves 92% of the 330,000 eligible importers still not enrolled. As of February 6, 2026, CBP requires all duty refunds to be issued via electronic funds transfer, meaning non-enrolled importers will face delays.",
+      "source": "Baker Tilly, Trans-Border Global analysis"
     },
     {
       "date": "APRIL 1, 2026",
       "badge": "POSITIVE",
       "category": "positive",
-      "headline": "CIT Endorses CBP Progress, No Government Appeal Filed Yet",
-      "summary": "Judge Eaton issued order praising CBP's 'satisfactory progress' on CAPE development. Government has 60-day window to appeal CIT's broad refund order but no appeal filed yet. Next CBP status report due April 14 with closed conference same day.",
-      "source": "Dickinson Wright"
+      "headline": "Court Confirms CBP Making 'Satisfactory Progress' on CAPE Development",
+      "summary": "On April 1, the Court of International Trade issued an order confirming that CBP is making 'satisfactory progress' on all four core CAPE components and reaffirming that refunds will be issued electronically. As of March 30, CBP estimates the claim portal is 85% complete, mass processing 60% complete, review and liquidation 80% complete, and refund 75% complete.",
+      "source": "Dickinson Wright, Lexology reports"
     },
     {
       "date": "MARCH 31, 2026",
-      "badge": "NEW DETAIL",
-      "category": "detail",
-      "headline": "45-Day Processing Window Confirmed for Accepted Claims",
-      "summary": "CBP committed to processing refund requests within 45 days of acceptance, unless compliance concerns require additional review. Refunds will be consolidated by liquidation date and importer, issued electronically only.",
-      "source": "Kelley Drye"
+      "badge": "LEGAL",
+      "category": "legal",
+      "headline": "CBP Confirms Finally Liquidated Entries Excluded from Phase 1",
+      "summary": "CBP has committed to developing capability to process claims for finally liquidated entries in a subsequent phase, but has not provided a timeframe for doing so. On March 27, the CIT ordered that finally liquidated entries shall be reliquidated without regard to IEEPA duties, but CBP will exclude them from Phase 1 to keep on schedule.",
+      "source": "Kelley Drye, Troutman Pepper analysis"
     },
     {
       "date": "MARCH 27, 2026",
       "badge": "LEGAL",
       "category": "legal",
-      "headline": "CIT Expands Refund Scope to Include Finally Liquidated Entries",
-      "summary": "Amended court order now requires CBP to reliquidate even finally liquidated entries 'without regard' to IEEPA duties. This significantly expands refund eligibility beyond the 90-day voluntary reliquidation window, though Phase 1 won't handle these cases.",
-      "source": "Forvis Mazars"
+      "headline": "Court Expands Refund Order to Include Finally Liquidated Entries",
+      "summary": "On March 27, the Court of International Trade issued an amended order requiring all final and liquidated entries (where the 180-day protest period has expired) to be reliquidated without regard to IEEPA duties. This significantly expands the scope of required refunds beyond CBP's initial Phase 1 capabilities.",
+      "source": "Forvis Mazars analysis"
     },
     {
-      "date": "MARCH 12, 2026",
+      "date": "FEBRUARY 20, 2026",
       "badge": "WATCH LIST",
       "category": "watch",
-      "headline": "Interest Accrual Continues: $23M Daily Across All Eligible Importers",
-      "summary": "Statutory interest continues accruing at approximately $650 million monthly across all IEEPA tariff payments. Total potential refund pool exceeds $170 billion with interest. Timing remains subject to court approval and potential government appeals.",
-      "source": "ClaimYourTariffs"
+      "headline": "Government Appeal Deadline Approaches in Early May 2026",
+      "summary": "The government has until approximately early May 2026 to appeal the CIT's March 4 order directing IEEPA refunds. The government has signaled it will challenge the CIT's order and may seek to stay the refund directive at the Federal Circuit Court of Appeals. This remains a key development to monitor for timing of actual refunds.",
+      "source": "ShipTech Logistics, Sullivan & Cromwell analysis"
     }
   ]
 }
