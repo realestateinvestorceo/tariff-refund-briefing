@@ -1,53 +1,61 @@
 {
-  "last_updated": "2026-04-11T13:14:08.216881+00:00",
+  "last_updated": "2026-04-12T13:16:11.786119+00:00",
   "items": [
     {
       "date": "APRIL 10, 2026",
       "badge": "BREAKING",
       "category": "breaking",
-      "headline": "CBP Confirms CAPE System Launch April 20 with Phase 1 Limitations",
-      "summary": "CBP published CSMS #68315804 confirming that Phase 1 of the CAPE refund system launches April 20, 2026. Phase 1 is limited to unliquidated entries and entries within 80 days of liquidation, covering approximately 63% of IEEPA entries. Refunds expected within 60-90 days of CAPE Declaration acceptance unless compliance concerns arise.",
-      "source": "U.S. Customs and Border Protection / Thompson Hine SmarTrade"
+      "headline": "CBP Confirms April 20 Launch Date for CAPE Refund System",
+      "summary": "CBP published CSMS #68315804 confirming Phase 1 of the CAPE system will launch April 20, 2026. The system will handle IEEPA duty refunds through the ACE portal, limited to unliquidated entries and entries within 80 days of liquidation. Refunds expected within 60-90 days of accepted declarations.",
+      "source": "CBP Cargo Systems Messaging Service"
     },
     {
-      "date": "APRIL 1, 2026",
+      "date": "APRIL 10, 2026",
+      "badge": "NEW DETAIL",
+      "category": "detail",
+      "headline": "CAPE System Launch Details: CSV Files, 9,999 Entry Limit Per Declaration",
+      "summary": "CBP released comprehensive guidance showing CAPE declarations will be submitted via CSV file upload through ACE Portal, limited to 9,999 entries per declaration. Only importers of record or authorized brokers who filed the entries can submit claims. Electronic ACH enrollment mandatory for refunds.",
+      "source": "Thompson Hine SmarTrade"
+    },
+    {
+      "date": "APRIL 8, 2026",
       "badge": "UPDATE",
-      "category": "positive",
-      "headline": "CIT Judge Endorses CBP's April 20 CAPE Rollout Timeline",
-      "summary": "Judge Eaton ruled that CBP continues to make satisfactory progress toward the April 20 deadline. CBP's four CAPE components are now 60-85% complete. Phase 1 will process refunds within 45 days of acceptance unless compliance issues require further review.",
-      "source": "U.S. Court of International Trade / Thompson Hine SmarTrade"
+      "category": "update",
+      "headline": "CBP Publishes CAPE Reference Guide and Resources Ahead of Launch",
+      "summary": "CBP published multiple resources including a fact sheet, CAPE Information Notice, step-by-step reference guide, and dedicated webpage to support the April 20 launch. The materials clarify that Phase 1 covers approximately 63% of IEEPA entries with more complex scenarios in later phases.",
+      "source": "Charles M Schayer Co."
+    },
+    {
+      "date": "APRIL 3, 2026",
+      "badge": "UPDATE",
+      "category": "update",
+      "headline": "CBP Updates Refund Timeline: 45 Days vs 60-90 Days Processing",
+      "summary": "CBP's March 31 declaration to CIT indicated 45-day processing timeline for accepted CAPE declarations, while public guidance suggests 60-90 days. The discrepancy appears related to compliance review requirements, with the shorter timeline applying when no compliance concerns exist.",
+      "source": "Kelley Drye & Warren"
     },
     {
       "date": "MARCH 31, 2026",
-      "badge": "NEW DETAIL",
-      "category": "detail",
-      "headline": "CBP Details Final Liquidated Entry Plans in Latest CIT Filing",
-      "summary": "CBP's March 31 declaration to CIT confirms mid-April deployment remains on track and provides first details on handling finally liquidated entries in subsequent CAPE phases. No timeline given for Phase 2 functionality covering entries beyond 90-day voluntary reliquidation period.",
-      "source": "Kelley Drye & Warren / Court of International Trade"
+      "badge": "LEGAL",
+      "category": "legal",
+      "headline": "CBP Files Status Update on Finally Liquidated Entries Refund Process",
+      "summary": "In response to CIT's March 27 order requiring refunds for finally liquidated entries, CBP confirmed Phase 1 cannot handle these cases. A subsequent phase will address finally liquidated entries but no timeline provided. CBP emphasized Phase 1 focuses on unliquidated and recently liquidated entries only.",
+      "source": "International Trade Insights"
     },
     {
       "date": "MARCH 27, 2026",
       "badge": "LEGAL",
       "category": "legal",
-      "headline": "CIT Orders Refunds for Finally Liquidated IEEPA Entries",
-      "summary": "Court of International Trade amended its order requiring CBP to reliquidate and refund IEEPA tariffs even for entries beyond final liquidation. This expands CBP's obligations beyond Phase 1 capabilities and will require additional CAPE development phases.",
-      "source": "U.S. Court of International Trade / Forvis Mazars"
+      "headline": "CIT Expands Refund Order to Include Finally Liquidated Entries",
+      "summary": "Judge Richard Eaton amended his order requiring CBP to reliquidate and refund IEEPA tariffs even for entries beyond final liquidation where the 180-day protest period has expired. This significantly expands the scope of required refunds beyond CBP's initial Phase 1 capabilities.",
+      "source": "Forvis Mazars"
     },
     {
-      "date": "MARCH 2026",
-      "badge": "WATCH LIST",
-      "category": "watch",
-      "headline": "Consumer Class Action Wave Targets IEEPA Refund Recipients",
-      "summary": "Over 2,000 consumer class actions filed against companies that passed IEEPA tariff costs to customers, including FedEx, UPS, Costco, and EssilorLuxottica. Plaintiffs claim companies will be unjustly enriched if they retain government refunds without passing savings to consumers who bore the costs.",
-      "source": "Troutman Pepper / Covington & Burling / Arnold & Porter"
-    },
-    {
-      "date": "FEBRUARY 20, 2026",
-      "badge": "BREAKING",
-      "category": "breaking",
-      "headline": "Supreme Court Strikes Down All IEEPA Tariffs as Unlawful",
-      "summary": "Supreme Court ruled 6-3 that IEEPA does not authorize presidential tariff authority, invalidating billions in collected duties. President Trump immediately terminated IEEPA tariffs and replaced them with Section 122 tariffs. Government has until June 8, 2026 to file appeal.",
-      "source": "U.S. Supreme Court / Multiple Legal Publications"
+      "date": "MARCH 26, 2026",
+      "badge": "POSITIVE",
+      "category": "positive",
+      "headline": "26,000+ Importers Enrolled in Electronic Refunds Representing $120B",
+      "summary": "More than 26,000 importers of record have enrolled in electronic refund systems, representing 78% of impacted entries and over $120 billion in duty value. This high enrollment rate suggests strong industry readiness for the CAPE system launch and indicates significant refund volume ahead.",
+      "source": "Yahoo Finance"
     }
   ]
 }
