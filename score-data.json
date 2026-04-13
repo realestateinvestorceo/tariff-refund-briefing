@@ -1,0 +1,66 @@
+{
+  "last_updated": "2026-04-13T12:00:00+00:00",
+  "composite_score": 68,
+  "verdict": "Move cautiously",
+  "verdict_color": "#2563EB",
+  "trend": "stable",
+  "score_summary": "The opportunity remains real but the window is narrowing. CAPE has not yet launched, 94% of importers are still unenrolled, and the legal foundation is solid. However, competition is building fast and fee compression is likely once CAPE goes live. The moderate scenario ($8-10M net) is achievable if you move within the next 30 days.",
+  "factors": [
+    {
+      "id": "cape_complexity",
+      "name": "CAPE System Friction",
+      "score": 8,
+      "weight": 0.20,
+      "weighted_contribution": 15.6,
+      "reasoning": "CAPE has not launched as of mid-April 2026. The March 31 filing showed mass processing at only 60% complete. Importers cannot yet self-file, preserving strong intermediary demand."
+    },
+    {
+      "id": "window_remaining",
+      "name": "Time Window",
+      "score": 7,
+      "weight": 0.18,
+      "weighted_contribution": 12.0,
+      "reasoning": "53 million entries remain in the backlog. Even after CAPE launches, CBP estimates 45 days per claim. At scale, processing will take 6-12 months minimum."
+    },
+    {
+      "id": "market_readiness",
+      "name": "Importer Unpreparedness",
+      "score": 8,
+      "weight": 0.18,
+      "weighted_contribution": 14.0,
+      "reasoning": "Only ~21,000 of 330,000+ importers have registered for electronic deposits. 12,300+ approved refunds are stuck in rejected status. The enrollment gap is widening weekly."
+    },
+    {
+      "id": "legal_certainty",
+      "name": "Legal Stability",
+      "score": 7,
+      "weight": 0.15,
+      "weighted_contribution": 10.0,
+      "reasoning": "Supreme Court ruling is final and unambiguous. The government's May 4 appeal deadline on finally-liquidated entries is the main risk, but core refund authority is settled."
+    },
+    {
+      "id": "competition_density",
+      "name": "Competitive Space",
+      "score": 5,
+      "weight": 0.12,
+      "weighted_contribution": 5.3,
+      "reasoning": "TRG, Flexport, McCune, and multiple law firms are active. The mid-market segment ($10K-$500K refunds) is less contested but filling up. First-mover advantage is eroding."
+    },
+    {
+      "id": "fee_pressure",
+      "name": "Fee Sustainability",
+      "score": 5,
+      "weight": 0.10,
+      "weighted_contribution": 4.4,
+      "reasoning": "Law firms charge 15-20%, but broker-level services are converging on 3-5%. Free tools from Flexport add downward pressure. Fees will compress further once CAPE launches."
+    },
+    {
+      "id": "regulatory_risk",
+      "name": "Regulatory Risk",
+      "score": 6,
+      "weight": 0.07,
+      "weighted_contribution": 3.9,
+      "reasoning": "Section 122 replacement tariff expires July 24 unless Congress extends. 24 states challenging it adds uncertainty. No direct threat to IEEPA refunds but regulatory environment is volatile."
+    }
+  ]
+}

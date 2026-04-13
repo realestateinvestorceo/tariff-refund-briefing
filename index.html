@@ -56,6 +56,25 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text);
 .hero-buttons { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
 .hero-buttons a { display: inline-block; padding: 11px 20px; border-radius: var(--radius); font-size: 13px; font-weight: 600; text-decoration: none; color: #fff; }
 
+/* Go/No-Go score widget */
+.go-score { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-lg); padding: 24px; margin: 24px 0 8px; max-width: 560px; }
+.go-score-top { display: flex; align-items: center; gap: 20px; }
+.go-score-num { font-size: 64px; font-weight: 800; line-height: 1; min-width: 80px; }
+.go-score-meta { flex: 1; }
+.go-score-verdict { font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+.go-score-trend { font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 2px; }
+.go-score-summary { font-size: 13px; color: rgba(255,255,255,0.55); margin-top: 6px; line-height: 1.5; }
+.go-score-factors { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 16px; }
+.go-factor { display: flex; align-items: center; gap: 8px; font-size: 11px; color: rgba(255,255,255,0.5); }
+.go-factor-bar { height: 6px; border-radius: 3px; flex-shrink: 0; width: 40px; }
+.go-factor-score { font-weight: 700; color: rgba(255,255,255,0.8); min-width: 16px; }
+.go-factor-name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 640px) {
+  .go-score-num { font-size: 48px; min-width: 60px; }
+  .go-score-factors { grid-template-columns: 1fr; }
+  .go-score-verdict { font-size: 14px; }
+}
+
 /* Sticky header */
 #sticky-header { position:sticky;top:0;z-index:100;background:var(--surface);border-bottom:1px solid var(--border);padding:12px 0; }
 #sticky-header .section-label { font-size:13px;font-weight:600;color:var(--text-secondary); }
@@ -175,8 +194,19 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text);
 <div class="hero">
   <div class="container">
     <div class="hero-label">Executive briefing for JZ</div>
-    <div class="hero-badge">Conditional Yes</div>
+    <div class="hero-badge" id="hero-badge">Conditional Yes</div>
     <h1>IEEPA Tariff Refund: Should We Build This?</h1>
+    <div class="go-score" id="go-score-widget" style="display:none;">
+      <div class="go-score-top">
+        <div class="go-score-num" id="go-score-num">--</div>
+        <div class="go-score-meta">
+          <div class="go-score-verdict" id="go-score-verdict">Loading...</div>
+          <div class="go-score-trend" id="go-score-trend"></div>
+          <div class="go-score-summary" id="go-score-summary"></div>
+        </div>
+      </div>
+      <div class="go-score-factors" id="go-score-factors"></div>
+    </div>
     <p class="hero-sub">A real $5–20M opportunity if we move fast. Not another ERC — smaller market, shorter window, leaner operation.</p>
     <div class="hero-stats">
       <div class="hero-stat"><div class="label">Refund pool</div><div class="val">$166B+</div></div>
@@ -579,6 +609,63 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text);
       });
     })
     .catch(function() { /* silently fail if no news-data.json */ });
+})();
+
+// Load Go/No-Go score from score-data.json
+(function() {
+  fetch('score-data.json')
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      if (!data.composite_score && data.composite_score !== 0) return;
+
+      var widget = document.getElementById('go-score-widget');
+      var badge = document.getElementById('hero-badge');
+      var numEl = document.getElementById('go-score-num');
+      var verdictEl = document.getElementById('go-score-verdict');
+      var trendEl = document.getElementById('go-score-trend');
+      var summaryEl = document.getElementById('go-score-summary');
+      var factorsEl = document.getElementById('go-score-factors');
+
+      // Show widget, update badge
+      widget.style.display = '';
+      if (badge) {
+        badge.textContent = data.verdict || 'Conditional Yes';
+        badge.style.background = data.verdict_color || '';
+      }
+
+      // Score number
+      numEl.textContent = data.composite_score;
+      numEl.style.color = data.verdict_color || '#fff';
+
+      // Verdict label
+      verdictEl.textContent = data.verdict || '';
+      verdictEl.style.color = data.verdict_color || '#fff';
+
+      // Trend
+      var arrows = { improving: '↑ Improving', declining: '↓ Declining', stable: '→ Stable' };
+      trendEl.textContent = arrows[data.trend] || '';
+
+      // Summary
+      if (data.score_summary) {
+        summaryEl.textContent = data.score_summary;
+      }
+
+      // Factor bars
+      if (data.factors && factorsEl) {
+        data.factors.forEach(function(f) {
+          var barColor = f.score >= 7 ? '#059669' : f.score >= 4 ? '#D97706' : '#DC2626';
+          var barWidth = Math.round((f.score / 10) * 40);
+          var el = document.createElement('div');
+          el.className = 'go-factor';
+          el.title = f.reasoning || '';
+          el.innerHTML = '<span class="go-factor-score">' + f.score + '</span>' +
+            '<div class="go-factor-bar" style="background:' + barColor + ';width:' + barWidth + 'px"></div>' +
+            '<span class="go-factor-name">' + (f.name || f.id) + '</span>';
+          factorsEl.appendChild(el);
+        });
+      }
+    })
+    .catch(function() { /* silently fail if no score-data.json */ });
 })();
 
 // Navigation
