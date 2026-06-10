@@ -1,61 +1,53 @@
 {
-  "last_updated": "2026-04-12T13:16:11.786119+00:00",
+  "last_updated": "2026-06-10T15:53:04.930145+00:00",
   "items": [
     {
-      "date": "APRIL 10, 2026",
+      "date": "JUNE 2, 2026",
       "badge": "BREAKING",
-      "category": "breaking",
-      "headline": "CBP Confirms April 20 Launch Date for CAPE Refund System",
-      "summary": "CBP published CSMS #68315804 confirming Phase 1 of the CAPE system will launch April 20, 2026. The system will handle IEEPA duty refunds through the ACE portal, limited to unliquidated entries and entries within 80 days of liquidation. Refunds expected within 60-90 days of accepted declarations.",
-      "source": "CBP Cargo Systems Messaging Service"
-    },
-    {
-      "date": "APRIL 10, 2026",
-      "badge": "NEW DETAIL",
-      "category": "detail",
-      "headline": "CAPE System Launch Details: CSV Files, 9,999 Entry Limit Per Declaration",
-      "summary": "CBP released comprehensive guidance showing CAPE declarations will be submitted via CSV file upload through ACE Portal, limited to 9,999 entries per declaration. Only importers of record or authorized brokers who filed the entries can submit claims. Electronic ACH enrollment mandatory for refunds.",
-      "source": "Thompson Hine SmarTrade"
-    },
-    {
-      "date": "APRIL 8, 2026",
-      "badge": "UPDATE",
-      "category": "update",
-      "headline": "CBP Publishes CAPE Reference Guide and Resources Ahead of Launch",
-      "summary": "CBP published multiple resources including a fact sheet, CAPE Information Notice, step-by-step reference guide, and dedicated webpage to support the April 20 launch. The materials clarify that Phase 1 covers approximately 63% of IEEPA entries with more complex scenarios in later phases.",
-      "source": "Charles M Schayer Co."
-    },
-    {
-      "date": "APRIL 3, 2026",
-      "badge": "UPDATE",
-      "category": "update",
-      "headline": "CBP Updates Refund Timeline: 45 Days vs 60-90 Days Processing",
-      "summary": "CBP's March 31 declaration to CIT indicated 45-day processing timeline for accepted CAPE declarations, while public guidance suggests 60-90 days. The discrepancy appears related to compliance review requirements, with the shorter timeline applying when no compliance concerns exist.",
-      "source": "Kelley Drye & Warren"
-    },
-    {
-      "date": "MARCH 31, 2026",
-      "badge": "LEGAL",
       "category": "legal",
-      "headline": "CBP Files Status Update on Finally Liquidated Entries Refund Process",
-      "summary": "In response to CIT's March 27 order requiring refunds for finally liquidated entries, CBP confirmed Phase 1 cannot handle these cases. A subsequent phase will address finally liquidated entries but no timeline provided. CBP emphasized Phase 1 focuses on unliquidated and recently liquidated entries only.",
-      "source": "International Trade Insights"
+      "headline": "Trump Administration Appeals CIT Refund Order for Finally Liquidated Entries",
+      "summary": "The government filed an appeal challenging the CIT's authority to issue universal injunctions for finally liquidated entries where importers haven't filed suit. The appeal specifically targets entries already 'finally liquidated' for importers without CIT cases. CBP continues processing $85B in refunds for unliquidated entries through CAPE.",
+      "source": "Steptoe & Johnson"
     },
     {
-      "date": "MARCH 27, 2026",
-      "badge": "LEGAL",
-      "category": "legal",
-      "headline": "CIT Expands Refund Order to Include Finally Liquidated Entries",
-      "summary": "Judge Richard Eaton amended his order requiring CBP to reliquidate and refund IEEPA tariffs even for entries beyond final liquidation where the 180-day protest period has expired. This significantly expands the scope of required refunds beyond CBP's initial Phase 1 capabilities.",
-      "source": "Forvis Mazars"
-    },
-    {
-      "date": "MARCH 26, 2026",
-      "badge": "POSITIVE",
+      "date": "MAY 26, 2026",
+      "badge": "UPDATE",
       "category": "positive",
-      "headline": "26,000+ Importers Enrolled in Electronic Refunds Representing $120B",
-      "summary": "More than 26,000 importers of record have enrolled in electronic refund systems, representing 78% of impacted entries and over $120 billion in duty value. This high enrollment rate suggests strong industry readiness for the CAPE system launch and indicates significant refund volume ahead.",
-      "source": "Yahoo Finance"
+      "headline": "CAPE Processing Milestone: 157K Declarations, $20.6B Already Processed",
+      "summary": "CBP reports 157,402 CAPE declarations submitted with 70% passing validation. Approximately 15.9 million entries validated, $85 billion in claims accepted, and $20.6 billion already processed through refund component. Claims showing status shift from 'accepted' to 'updated' indicating active processing.",
+      "source": "Baker Tilly"
+    },
+    {
+      "date": "MAY 11, 2026",
+      "badge": "DETAIL",
+      "category": "update",
+      "headline": "126K CAPE Declarations Filed, $35.5B in Anticipated Refunds Processed",
+      "summary": "CBP filed updated progress report showing 126,237 CAPE declarations submitted since April 20 launch. Over 15 million entries accepted for IEEPA duty removal, with 8.3 million entries liquidated/reliquidated. Anticipated refund amount of $35.46 billion (principal plus interest) for processed entries.",
+      "source": "Flexport"
+    },
+    {
+      "date": "APRIL 20, 2026",
+      "badge": "NEW DETAIL",
+      "category": "breaking",
+      "headline": "CAPE Phase 1 Goes Live - Refund Portal Now Accepting Claims",
+      "summary": "CBP launched CAPE Phase 1 at 8am EDT allowing importers to submit refund claims for unliquidated entries and those within 80 days of liquidation. System processes up to 9,999 entries per CSV declaration with anticipated 60-90 day refund timeline. Excludes reconciliation, drawback, and AD/CVD entries for future phases.",
+      "source": "U.S. CBP"
+    },
+    {
+      "date": "JUNE 9, 2026",
+      "badge": "WATCH LIST",
+      "category": "watch",
+      "headline": "CBP Commissioner Ordered to Court Appearance on CAPE Compliance",
+      "summary": "Judge Eaton ordered CBP Commissioner Scott to appear in court June 9 to explain slow compliance in developing CAPE Phases 2+ for more complex entry scenarios. Court issued show cause order questioning why suspension of universal refund mandate shouldn't be lifted for finally liquidated entries.",
+      "source": "BDO"
+    },
+    {
+      "date": "JULY 24, 2026",
+      "badge": "WATCH LIST",
+      "category": "watch",
+      "headline": "Section 122 Replacement Tariff Set to Expire - No Extension in Sight",
+      "summary": "The 10% Section 122 global tariff expires automatically after 150 days unless Congress acts to extend. No extension bill has cleared committee, and President cannot extend unilaterally. USTR running accelerated Section 301 investigations on 16 economies as potential replacement mechanism.",
+      "source": "FreightFigures"
     }
   ]
 }
