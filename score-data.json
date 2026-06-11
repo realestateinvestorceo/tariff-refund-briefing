@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-06-10T15:53:04.930145+00:00",
-  "composite_score": 65,
+  "last_updated": "2026-06-11T16:13:37.200545+00:00",
+  "composite_score": 70,
   "verdict": "Move cautiously",
   "verdict_color": "#2563EB",
-  "trend": "stable",
-  "score_summary": "The intermediary business opportunity presents a mixed but moderately favorable landscape. Strong demand indicators include 90%+ of eligible importers lacking basic ACE/ACH setup and widespread confusion about CAPE filing requirements, creating substantial need for expert assistance. However, the June 2026 government appeal challenging refunds for finally liquidated entries introduces significant legal uncertainty that could fragment the addressable market. While CAPE system complexity and importer unpreparedness favor intermediaries, increasing competition from established firms and evolving fee pressure as the system matures present challenges. The 6-12 month processing window remains substantial, but regulatory risks and the pending Federal Circuit appeal create execution urgency. Overall viability depends heavily on focusing on unliquidated/recent entries while the legal framework stabilizes.",
+  "trend": "improving",
+  "score_summary": "The IEEPA tariff refund intermediary opportunity presents strong near-term viability with an overall favorable environment. Significant system friction in CAPE, a massive remaining backlog representing 6-12+ months of processing, and widespread importer unpreparedness create substantial demand for professional assistance. While legal challenges around finally liquidated entries and potential new tariff regimes introduce some uncertainty, the core refund process for Phase 1 entries remains legally sound. The competitive landscape shows demand exceeding supply among mid-market players, though fee structures appear increasingly competitive. The window for this opportunity is substantial but time-limited, making immediate market entry advantageous for capturing the significant unserved demand among the 330,000 affected importers.",
   "factors": [
     {
       "id": "cape_complexity",
@@ -12,31 +12,31 @@
       "score": 8,
       "weight": 0.2,
       "weighted_contribution": 15.6,
-      "reasoning": "Fewer than 10% of the 330,000 importers eligible for IEEPA refunds had completed ACH bank enrollment as of early March 2026, with 90%+ lacking basic prerequisites to receive refunds before CAPE opened on April 20. Many filers filed entry summaries incorrectly during IEEPA tariff period, and duty recalculations through CAPE using new validation functionality may differ from original calculations. More than 16 million entries have been processed through CAPE Phase 1, with over $89 billion accepted for processing and approximately $22 billion completed and sent to Treasury."
+      "reasoning": "CAPE system has significant friction with widespread filing errors, payment method verification issues, ACE portal access problems, and confusion about correct importer identification. Entries liquidated within 15 days of the Supreme Court ruling are flagged for manual review extending processing to 75-90 days. CBP lacks necessary system enhancements for finally liquidated entries requiring additional development."
     },
     {
       "id": "window_remaining",
       "name": "Time Window",
-      "score": 7,
+      "score": 9,
       "weight": 0.18,
-      "weighted_contribution": 12.0,
-      "reasoning": "Phase 1 entries continue aging out of the 80-day window after liquidation, and new ACE portal applications take up to 30 days to process. CBP reports reconciliation processing capability should be available by June 29, with further CAPE expansion planned for additional entry categories and entries filed by CIT plaintiffs. Section 122 expires July 24, creating deadline pressure for related refund processing."
+      "weighted_contribution": 16.0,
+      "reasoning": "As of May 26, 2026, nearly 16 million entries passed validations with 8.5 million liquidated, representing approximately $85 billion in potential refunds accepted for processing out of $166 billion total. Major categories remain excluded from Phase 1 including reconciliation entries, finally liquidated entries, and AD/CVD entries requiring future phases. This indicates 6-12+ months of massive backlog processing ahead."
     },
     {
       "id": "market_readiness",
       "name": "Importer Unpreparedness",
-      "score": 9,
+      "score": 8,
       "weight": 0.18,
-      "weighted_contribution": 16.0,
-      "reasoning": "Fewer than 10% of the 330,000 importers eligible for IEEPA refunds had completed ACH enrollment as of early March 2026, meaning 90%+ lacked the basic prerequisites to receive their money before CAPE opened. Only ~21,000 of 330,566 affected importers have completed ACH setup, leaving the vast majority unready for electronic refunds. New ACE account applications take up to 30 days to process, requiring identity verification, importer-of-record validation, and bond review before issuing portal access."
+      "weighted_contribution": 14.0,
+      "reasoning": "330,000 importers need help with refunds totaling $166 billion across 53 million entries. Widespread ACH enrollment issues with importers enrolling after liquidation creating fraud flags and payment verification delays. Common access problems including long wait times for password resets, over-registration of training events, and confusion about correct importer identification indicate widespread unpreparedness."
     },
     {
       "id": "legal_certainty",
       "name": "Legal Stability",
-      "score": 4,
+      "score": 6,
       "weight": 0.15,
-      "weighted_contribution": 5.0,
-      "reasoning": "On June 2, 2026, the Trump administration appealed the CIT's universal injunction directing CBP to reliquidate finally liquidated entries without IEEPA duties for importers who haven't filed suit. The government appealed to the Federal Circuit arguing the injunction exceeds CIT jurisdiction under Trump v. CASA, Inc., which held universal injunctions are impermissible. DOJ revealed it will seek a stay of the order requiring CBP to refund automatically through existing processes, arguing CBP has no authority to reliquidate without court order."
+      "weighted_contribution": 8.3,
+      "reasoning": "CBP filed appeals on June 2, 2026, challenging both the universal refund order and CBP Commissioner testimony requirement, creating uncertainty for finally liquidated entries. CBP reversed position on May 29, 2026, asserting lack of authority to refund finally liquidated entries without court orders, contradicting published guidance. However, courts strongly support refunds for Phase 1 entries with active judicial oversight continuing."
     },
     {
       "id": "competition_density",
@@ -44,7 +44,7 @@
       "score": 7,
       "weight": 0.12,
       "weighted_contribution": 8.0,
-      "reasoning": "RSM offers services including identifying eligible entries, assessing exposure with proprietary analytics tools, assisting with data preparation and validation, and advising on refund strategy. BDO's Customs & International Trade Services professionals provide scalable support to pinpoint impacted entries, quantify refund value, and prepare/submit refund claims including CAPE-ready data. A secondary market for IEEPA tariff refund rights is developing quickly, with importers exploring ways to assign, sell, pledge, or monetize anticipated refunds with lenders, funds, and specialty receivables buyers."
+      "reasoning": "Customs brokers, trade attorneys, and freight forwarders are fielding calls from importers but most lack bandwidth to run multi-thousand-entry analyses. Multiple specialized competitors exist including Tariff Recovery Group, Leyton, and Tariff Partners offering comprehensive services, but market appears undersupplied relative to demand. Major players like UPS offer support services but focus on existing customers."
     },
     {
       "id": "fee_pressure",
@@ -52,15 +52,15 @@
       "score": 6,
       "weight": 0.1,
       "weighted_contribution": 5.6,
-      "reasoning": "Current data shows established accounting and law firms are actively providing IEEPA refund services, but specific fee structures are not disclosed in available sources. The CAPE process is designed to be more streamlined than traditional refund or protest mechanisms, using structured CSV files rather than narrative claims or extensive documentation. Secondary market transactions for refund rights are not simple receivable sales and implicate federal Assignment of Claims Act, CBP payment procedures, and UCC perfection issues."
+      "reasoning": "Leyton operates on success-based model with payment only if funds recovered. Tariff Partners offers zero-cost partner programs with compensation following closed engagements through filing fees or referral revenue. However, no specific fee percentages disclosed in searches and multiple competitors suggest pricing pressure exists. Market appears to accept contingency-based models indicating fees are sustainable but competitive."
     },
     {
       "id": "regulatory_risk",
       "name": "Regulatory Risk",
-      "score": 5,
+      "score": 4,
       "weight": 0.07,
-      "weighted_contribution": 3.1,
-      "reasoning": "The government submitted a statement arguing certain aspects of the CIT injunction are unlawful, specifically challenging refunds for finally liquidated entries where importers haven't filed CIT cases. Section 122 expires July 24 and the government's Federal Circuit appeal window closes around June 7, creating regulatory uncertainty. CBP's position appears to contradict its own published guidance indicating finally liquidated entries will be included in upcoming CAPE phases, with the appeal deadline being June 6, 2026."
+      "weighted_contribution": 2.3,
+      "reasoning": "Trump administration proposing new tariffs on 60 countries at 10-12.5% rates and 25% on Brazil under Section 301, plus industry-specific Section 232 duties. Section 122 tariffs expire July 24, 2026, unless Congress extends them. Tariff Refund Act of 2026 (S 3905) could require CBP to refund all IEEPA duties within 180 days, potentially accelerating the process but also signaling legislative activity in this area."
     }
   ]
 }
