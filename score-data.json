@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-06-11T16:13:37.200545+00:00",
-  "composite_score": 70,
+  "last_updated": "2026-06-12T15:29:52.110108+00:00",
+  "composite_score": 63,
   "verdict": "Move cautiously",
   "verdict_color": "#2563EB",
-  "trend": "improving",
-  "score_summary": "The IEEPA tariff refund intermediary opportunity presents strong near-term viability with an overall favorable environment. Significant system friction in CAPE, a massive remaining backlog representing 6-12+ months of processing, and widespread importer unpreparedness create substantial demand for professional assistance. While legal challenges around finally liquidated entries and potential new tariff regimes introduce some uncertainty, the core refund process for Phase 1 entries remains legally sound. The competitive landscape shows demand exceeding supply among mid-market players, though fee structures appear increasingly competitive. The window for this opportunity is substantial but time-limited, making immediate market entry advantageous for capturing the significant unserved demand among the 330,000 affected importers.",
+  "trend": "declining",
+  "score_summary": "The IEEPA refund intermediary opportunity shows strong fundamentals with a cumulative score of 45/70. Key strengths include significant CAPE system complexity (score 8), widespread market unpreparedness (score 8), and substantial remaining processing window (score 7). The technical friction in CAPE validation, with 15-30% rejection rates and complex error resolution, creates clear value for professional intermediaries. However, the business faces material legal uncertainty (score 4) from the government's June 2026 Federal Circuit appeal, which could affect $30+ billion in finally liquidated entries. Competition remains limited to high-end legal services, leaving mid-market opportunity open. The window is closing but remains viable for 6-12 months given processing backlogs and Phase 2 entries. Launch timing is critical given legal uncertainties and the need to establish market position before technical barriers diminish.",
   "factors": [
     {
       "id": "cape_complexity",
@@ -12,15 +12,15 @@
       "score": 8,
       "weight": 0.2,
       "weighted_contribution": 15.6,
-      "reasoning": "CAPE system has significant friction with widespread filing errors, payment method verification issues, ACE portal access problems, and confusion about correct importer identification. Entries liquidated within 15 days of the Supreme Court ruling are flagged for manual review extending processing to 75-90 days. CBP lacks necessary system enhancements for finally liquidated entries requiring additional development."
+      "reasoning": "CAPE system has significant friction with 15-30% rejection rates, complex validation errors, system overload issues, and technical requirements that overwhelm many importers. CBS News reported system going 'blinky' and widespread validation failures requiring specialized knowledge to resolve."
     },
     {
       "id": "window_remaining",
       "name": "Time Window",
-      "score": 9,
+      "score": 7,
       "weight": 0.18,
-      "weighted_contribution": 16.0,
-      "reasoning": "As of May 26, 2026, nearly 16 million entries passed validations with 8.5 million liquidated, representing approximately $85 billion in potential refunds accepted for processing out of $166 billion total. Major categories remain excluded from Phase 1 including reconciliation entries, finally liquidated entries, and AD/CVD entries requiring future phases. This indicates 6-12+ months of massive backlog processing ahead."
+      "weighted_contribution": 12.0,
+      "reasoning": "Substantial processing backlog remains with approximately $85 billion accepted but only $20.6 billion processed as of May 26, 2026. Phase 2 entries (finally liquidated) still await processing, creating ongoing opportunity beyond Phase 1 window."
     },
     {
       "id": "market_readiness",
@@ -28,15 +28,15 @@
       "score": 8,
       "weight": 0.18,
       "weighted_contribution": 14.0,
-      "reasoning": "330,000 importers need help with refunds totaling $166 billion across 53 million entries. Widespread ACH enrollment issues with importers enrolling after liquidation creating fraud flags and payment verification delays. Common access problems including long wait times for password resets, over-registration of training events, and confusion about correct importer identification indicate widespread unpreparedness."
+      "reasoning": "As of April 28, only 21% of eligible entries had been filed through CAPE, indicating vast majority of importers still need assistance. Many mid-market importers lack ACE portal expertise and struggle with technical requirements."
     },
     {
       "id": "legal_certainty",
       "name": "Legal Stability",
-      "score": 6,
+      "score": 4,
       "weight": 0.15,
-      "weighted_contribution": 8.3,
-      "reasoning": "CBP filed appeals on June 2, 2026, challenging both the universal refund order and CBP Commissioner testimony requirement, creating uncertainty for finally liquidated entries. CBP reversed position on May 29, 2026, asserting lack of authority to refund finally liquidated entries without court orders, contradicting published guidance. However, courts strongly support refunds for Phase 1 entries with active judicial oversight continuing."
+      "weighted_contribution": 5.0,
+      "reasoning": "Government filed Federal Circuit appeal on June 2, 2026, creating significant uncertainty. Appeal targets $30+ billion in finally liquidated entries and could result in stay of refunds. Legal landscape highly unstable with active appellate proceedings."
     },
     {
       "id": "competition_density",
@@ -44,7 +44,7 @@
       "score": 7,
       "weight": 0.12,
       "weighted_contribution": 8.0,
-      "reasoning": "Customs brokers, trade attorneys, and freight forwarders are fielding calls from importers but most lack bandwidth to run multi-thousand-entry analyses. Multiple specialized competitors exist including Tariff Recovery Group, Leyton, and Tariff Partners offering comprehensive services, but market appears undersupplied relative to demand. Major players like UPS offer support services but focus on existing customers."
+      "reasoning": "Market dominated by large law firms and accounting firms (Baker Tilly, RSM, Aprio). Few specialized mid-market intermediaries identified in search results. Most competition focused on high-end legal services rather than streamlined mid-market processing."
     },
     {
       "id": "fee_pressure",
@@ -52,15 +52,15 @@
       "score": 6,
       "weight": 0.1,
       "weighted_contribution": 5.6,
-      "reasoning": "Leyton operates on success-based model with payment only if funds recovered. Tariff Partners offers zero-cost partner programs with compensation following closed engagements through filing fees or referral revenue. However, no specific fee percentages disclosed in searches and multiple competitors suggest pricing pressure exists. Market appears to accept contingency-based models indicating fees are sustainable but competitive."
+      "reasoning": "No clear fee benchmarks established yet in market. Major firms offering services but pricing not publicly disclosed. Self-filing possible for sophisticated importers, but technical complexity supports value proposition for professional assistance."
     },
     {
       "id": "regulatory_risk",
       "name": "Regulatory Risk",
-      "score": 4,
+      "score": 5,
       "weight": 0.07,
-      "weighted_contribution": 2.3,
-      "reasoning": "Trump administration proposing new tariffs on 60 countries at 10-12.5% rates and 25% on Brazil under Section 301, plus industry-specific Section 232 duties. Section 122 tariffs expire July 24, 2026, unless Congress extends them. Tariff Refund Act of 2026 (S 3905) could require CBP to refund all IEEPA duties within 180 days, potentially accelerating the process but also signaling legislative activity in this area."
+      "weighted_contribution": 3.1,
+      "reasoning": "Moderate risk from ongoing Federal Circuit appeal and potential Supreme Court review. Trump administration actively contesting universal refund orders. However, underlying IEEPA invalidation by Supreme Court remains solid, limiting downside risk to refund eligibility itself."
     }
   ]
 }
