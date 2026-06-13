@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-06-12T15:29:52.110108+00:00",
-  "composite_score": 63,
+  "last_updated": "2026-06-13T14:14:06.167475+00:00",
+  "composite_score": 59,
   "verdict": "Move cautiously",
   "verdict_color": "#2563EB",
   "trend": "declining",
-  "score_summary": "The IEEPA refund intermediary opportunity shows strong fundamentals with a cumulative score of 45/70. Key strengths include significant CAPE system complexity (score 8), widespread market unpreparedness (score 8), and substantial remaining processing window (score 7). The technical friction in CAPE validation, with 15-30% rejection rates and complex error resolution, creates clear value for professional intermediaries. However, the business faces material legal uncertainty (score 4) from the government's June 2026 Federal Circuit appeal, which could affect $30+ billion in finally liquidated entries. Competition remains limited to high-end legal services, leaving mid-market opportunity open. The window is closing but remains viable for 6-12 months given processing backlogs and Phase 2 entries. Launch timing is critical given legal uncertainties and the need to establish market position before technical barriers diminish.",
+  "score_summary": "The IEEPA tariff refund intermediary business shows moderate viability with several favorable factors. High CAPE system complexity (score 8) and substantial processing backlogs (score 7) create strong demand for intermediary services, while limited competition from expensive law firms (score 7) provides market opportunity. However, the government's June 2026 appeal creates significant legal uncertainty (score 4) that could halt or delay the entire refund process. With 22% of importers still unready and $64+ billion remaining in the pipeline, timing favors market entry, but the appeal risk requires careful monitoring and potentially conservative business planning.",
   "factors": [
     {
       "id": "cape_complexity",
@@ -12,7 +12,7 @@
       "score": 8,
       "weight": 0.2,
       "weighted_contribution": 15.6,
-      "reasoning": "CAPE system has significant friction with 15-30% rejection rates, complex validation errors, system overload issues, and technical requirements that overwhelm many importers. CBS News reported system going 'blinky' and widespread validation failures requiring specialized knowledge to resolve."
+      "reasoning": "CAPE faces significant friction with data formatting issues, CSV preparation requirements, entry-level validation errors, ACH enrollment problems, data mismatches, and long wait times to reset usernames and passwords. Only 70% of declarations pass initial validation, with automatic holds extending processing by 30-45 days for outdated ACH data. Phase 1 acceptance rate on first pass is only 21%, with CBP unable to open Phase 2 while 4 out of 5 submissions fail validation."
     },
     {
       "id": "window_remaining",
@@ -20,15 +20,15 @@
       "score": 7,
       "weight": 0.18,
       "weighted_contribution": 12.0,
-      "reasoning": "Substantial processing backlog remains with approximately $85 billion accepted but only $20.6 billion processed as of May 26, 2026. Phase 2 entries (finally liquidated) still await processing, creating ongoing opportunity beyond Phase 1 window."
+      "reasoning": "CBP has processed $20.6 billion of $85 billion accepted claims as of May 26, 2026, leaving approximately $64.4 billion in the pipeline. Phase 2 is expected in summer/fall 2026 with 6-12 months processing time, and the total IEEPA universe covers $166 billion from 330,000 importers across 53 million entries. Section 122 replacement tariffs expire July 24, 2026, creating additional urgency."
     },
     {
       "id": "market_readiness",
       "name": "Importer Unpreparedness",
-      "score": 8,
+      "score": 6,
       "weight": 0.18,
-      "weighted_contribution": 14.0,
-      "reasoning": "As of April 28, only 21% of eligible entries had been filed through CAPE, indicating vast majority of importers still need assistance. Many mid-market importers lack ACE portal expertise and struggle with technical requirements."
+      "weighted_contribution": 10.0,
+      "reasoning": "26,000 importers have enrolled representing 78% of impacted entries and $120 billion in duty value. The remaining 22% of entries covering smaller importers will face automatic rejection when filing claims, though large publicly traded importers with customs brokers have largely completed enrollment. While major importers are prepared, significant smaller importer population remains unready."
     },
     {
       "id": "legal_certainty",
@@ -36,7 +36,7 @@
       "score": 4,
       "weight": 0.15,
       "weighted_contribution": 5.0,
-      "reasoning": "Government filed Federal Circuit appeal on June 2, 2026, creating significant uncertainty. Appeal targets $30+ billion in finally liquidated entries and could result in stay of refunds. Legal landscape highly unstable with active appellate proceedings."
+      "reasoning": "The Trump administration filed an appeal on June 2, 2026, challenging the CIT's universal refund order requiring CBP to refund $166 billion in tariffs, and also appealed the CBP Commissioner testimony order. A successful appeal could result in a stay of the refund process and significantly delay payments for all importers. The appeal creates substantial uncertainty about continued refund processing."
     },
     {
       "id": "competition_density",
@@ -44,23 +44,23 @@
       "score": 7,
       "weight": 0.12,
       "weighted_contribution": 8.0,
-      "reasoning": "Market dominated by large law firms and accounting firms (Baker Tilly, RSM, Aprio). Few specialized mid-market intermediaries identified in search results. Most competition focused on high-end legal services rather than streamlined mid-market processing."
+      "reasoning": "Trade law firms include Sandler Travis & Rosenberg, Grunfeld Desiderio Lebowitz Silverman Klestadt, and Venable, with hourly rates typically running $500 to $1,500. Currently, third parties without original filing authority cannot submit CAPE declarations. The market appears dominated by expensive law firms with limited mid-market competition, creating opportunity for specialized intermediaries."
     },
     {
       "id": "fee_pressure",
       "name": "Fee Sustainability",
-      "score": 6,
+      "score": 5,
       "weight": 0.1,
-      "weighted_contribution": 5.6,
-      "reasoning": "No clear fee benchmarks established yet in market. Major firms offering services but pricing not publicly disclosed. Self-filing possible for sophisticated importers, but technical complexity supports value proposition for professional assistance."
+      "weighted_contribution": 4.4,
+      "reasoning": "Current news context does not provide specific data on prevailing fee structures or pricing pressure for IEEPA refund intermediary services. Law firms charge $500-$1,500 hourly rates, suggesting room for competitive fixed-fee or percentage-based pricing, but insufficient data exists to score this factor with confidence."
     },
     {
       "id": "regulatory_risk",
       "name": "Regulatory Risk",
-      "score": 5,
+      "score": 6,
       "weight": 0.07,
-      "weighted_contribution": 3.1,
-      "reasoning": "Moderate risk from ongoing Federal Circuit appeal and potential Supreme Court review. Trump administration actively contesting universal refund orders. However, underlying IEEPA invalidation by Supreme Court remains solid, limiting downside risk to refund eligibility itself."
+      "weighted_contribution": 3.9,
+      "reasoning": "The Tariff Refund Act of 2026 (S 3905) would require CBP to refund all IEEPA duties within 180 days with interest and prioritize small businesses. Section 122 replacement tariffs expire July 24, 2026, unless extended by Congress. While no immediate legislative threats to eliminate refunds exist, potential congressional action could accelerate the refund process or change the regulatory landscape significantly."
     }
   ]
 }
