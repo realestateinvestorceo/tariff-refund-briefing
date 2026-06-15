@@ -1,53 +1,53 @@
 {
-  "last_updated": "2026-06-14T14:18:26.997474+00:00",
+  "last_updated": "2026-06-15T17:22:35.044834+00:00",
   "items": [
     {
-      "date": "JUNE 10, 2026",
+      "date": "JUNE 11, 2026",
       "badge": "BREAKING",
       "category": "breaking",
-      "headline": "CBP to Launch CAPE Phase 2 for Reconciliation Entries June 29",
-      "summary": "CBP informed the Court of International Trade on June 9 that CAPE Phase 2, covering reconciliation entries worth $28.7 billion in refunds, will launch June 29. Over 16 million entries have been processed to date with $22 billion in refunds sent to Treasury. DOJ continues to oppose lifting the suspension of immediate compliance requirements.",
-      "source": "GHY International Trade"
-    },
-    {
-      "date": "JUNE 11, 2026",
-      "badge": "UPDATE",
-      "category": "update",
-      "headline": "CAPE Phase 3 for Finally Liquidated Entries Scheduled End of July",
-      "summary": "At the June 9 CIT hearing, CBP testified that Phase 3 covering finally liquidated entries will be ready by end of July 2026. However, DOJ argues CBP cannot issue refunds on these entries without individual CIT lawsuits. The technical capability is on track but legal disputes continue at Federal Circuit.",
+      "headline": "CAPE Phase 3 Confirmed for Late July - Finally Liquidated Entries",
+      "summary": "CBP confirmed at the June 9 CIT hearing that CAPE Phase 3 will be ready by end of July 2026, covering finally liquidated entries that paid IEEPA tariffs. However, the DOJ continues to contest the legal authority to refund these entries without individual lawsuits, creating uncertainty about actual refund disbursements.",
       "source": "Green Worldwide Shipping"
     },
     {
-      "date": "JUNE 2, 2026",
-      "badge": "LEGAL",
-      "category": "legal",
-      "headline": "Trump Administration Appeals CIT Universal Refund Order to Federal Circuit",
-      "summary": "DOJ formally appealed Judge Eaton's universal IEEPA refund order to the Federal Circuit, challenging the CIT's authority to order refunds for non-litigants with finally liquidated entries. The appeal also contests the order compelling CBP Commissioner Scott's testimony, creating new uncertainty for the refund process.",
-      "source": "Thompson Hine SmarTrade"
+      "date": "JUNE 10, 2026",
+      "badge": "UPDATE",
+      "category": "update",
+      "headline": "CAPE Phase 2 Launch Date Set for June 29 - Reconciliation Entries",
+      "summary": "CBP told the CIT on June 9 that CAPE Phase 2 will launch June 29, 2026, expanding functionality to process reconciliation entries. This represents approximately $28.7 billion in additional refunds. Over 16 million entries have been processed through Phase 1 with $89 billion accepted for processing.",
+      "source": "GHY International"
     },
     {
       "date": "JUNE 9, 2026",
       "badge": "NEW DETAIL",
       "category": "detail",
-      "headline": "CBP Reports $89B in CAPE Refunds Accepted, $24B Processed",
-      "summary": "Latest CBP statistics show more than $89 billion in potential and certified IEEPA refunds accepted for processing through CAPE, with nearly $24 billion sent to Treasury for payment. CBP projects reaching $60 billion by month-end and plans $480 million in weekly Treasury transfers.",
-      "source": "Supply Chain Dive"
+      "headline": "CBP Officials Testify on Refund Progress - $24 Billion Sent to Treasury",
+      "summary": "At the June 9 CIT hearing, CBP Executive Assistant Commissioner Susan Thomas testified instead of Commissioner Scott after Federal Circuit intervention. CBP reported nearly $24 billion in refunds sent to Treasury for payment, with $480 million more expected this week. The agency expects to surpass $60 billion by month-end.",
+      "source": "International Trade Insights"
     },
     {
-      "date": "MAY 9, 2026",
-      "badge": "WATCH LIST",
-      "category": "watch",
-      "headline": "Nike Hit with $1B Class Action Over IEEPA Tariff Refunds",
-      "summary": "Nike faces consumer class action in Portland federal court alleging the company raised prices to offset $1 billion in IEEPA duties but won't return refunds to customers. This follows similar suits against Amazon, Lululemon, and other major retailers creating 'double recovery' litigation risk for companies pursuing federal refunds.",
-      "source": "Flora Dress / Sourcing Journal"
+      "date": "JUNE 2, 2026",
+      "badge": "BREAKING",
+      "category": "legal",
+      "headline": "Trump Administration Formally Appeals Universal Refund Order",
+      "summary": "DOJ filed formal appeal at Federal Circuit challenging CIT's universal injunction requiring $166 billion in IEEPA refunds for non-litigants. The appeal specifically targets refunds for finally liquidated entries where importers haven't filed individual lawsuits, potentially blocking access for thousands of importers.",
+      "source": "Thompson Hine SmarTrade"
     },
     {
-      "date": "JULY 24, 2026",
+      "date": "MAY 29, 2026",
       "badge": "WATCH LIST",
       "category": "watch",
-      "headline": "Section 122 Replacement Tariffs Set to Expire Without Congressional Action",
-      "summary": "The 15% Section 122 tariffs that replaced IEEPA duties expire July 24, 2026 unless Congress acts. No extension legislation has been introduced, potentially creating a tariff vacuum for non-Section 232/301 goods. Administration prefers permanent statutory replacement but faces uncertain Congressional politics.",
-      "source": "Peacock Tariff Consulting"
+      "headline": "CBP Reverses Position - Claims No Authority for Final Liquidations",
+      "summary": "For the first time since the Supreme Court ruling, CBP asserted it lacks legal authority to refund finally liquidated entries (180+ days past liquidation) without importer-specific court orders. This position reversal affects the largest category of IEEPA refunds and signals intensifying government resistance.",
+      "source": "National Law Review"
+    },
+    {
+      "date": "MAY 12, 2026",
+      "badge": "POSITIVE",
+      "category": "positive",
+      "headline": "First ACH Payments Hit Importer Bank Accounts",
+      "summary": "IEEPA tariff refunds began arriving in importer bank accounts via ACH transfer, marking the first successful completions of the CAPE Phase 1 process. CBP confirmed ACH payments could begin as early as May 12, with refunds typically taking 60-90 days from CAPE Declaration acceptance to disbursement.",
+      "source": "Troutman Pepper"
     }
   ]
 }

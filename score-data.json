@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-06-14T14:18:26.997474+00:00",
-  "composite_score": 58,
+  "last_updated": "2026-06-15T17:22:35.044834+00:00",
+  "composite_score": 61,
   "verdict": "Move cautiously",
   "verdict_color": "#2563EB",
   "trend": "stable",
-  "score_summary": "The IEEPA refund intermediary opportunity shows moderate viability (average score ~6.1/10) driven by strong technical complexity needs and substantial processing backlogs extending through July 2026. However, significant legal uncertainty from the pending Federal Circuit appeal, established competition from law firms and brokers, and CBP's free processing create headwinds. The 6-12 month window remains substantial, but success depends on targeting mid-market importers who need technical assistance but want to avoid expensive legal fees. The business model faces pressure from free government processing and competitive pricing, requiring differentiation through specialized expertise and service quality.",
+  "score_summary": "The IEEPA refund intermediary opportunity shows moderate-to-good viability with a combined weighted assessment suggesting favorable market conditions. Strong factors include significant system complexity (15% rejection rates), substantial remaining processing window (Phases 2-3 launching through July), and large unserved market (22% of importers unregistered, many small businesses unable to self-serve). However, major legal uncertainty from the June 2 Federal Circuit appeal and CBP's reversal on finally liquidated entries creates substantial regulatory risk that could halt the entire refund process mid-stream. The window for market entry appears optimal now, but success depends heavily on the Federal Circuit's ruling on the government's appeal.",
   "factors": [
     {
       "id": "cape_complexity",
@@ -12,7 +12,7 @@
       "score": 7,
       "weight": 0.2,
       "weighted_contribution": 13.3,
-      "reasoning": "CAPE requires structured CSV file uploads with multiple validation levels that can reject entire declarations for formatting errors, creating technical complexity that many mid-market importers struggle with. The system has file-level and entry-level validations that frequently cause rejections requiring correction and resubmission. CBP emphasizes technical perfection to avoid automated rejections, and many importers need assistance with the technical nuances of ACE CAPE functionality."
+      "reasoning": "Data formatting issues, CSV preparation requirements and entry-level validation errors continue to create friction, with CBP officially confirming 15% of CAPE Declarations are being rejected. For smaller importers looking at potential refunds, the time and cost of completing prerequisites can exceed the refund value, particularly for occasional importers and small DTC brands whose IEEPA exposure is spread thinly."
     },
     {
       "id": "window_remaining",
@@ -20,47 +20,47 @@
       "score": 8,
       "weight": 0.18,
       "weighted_contribution": 14.0,
-      "reasoning": "Phase 2 for reconciliation entries worth $28.7 billion launches June 29, and Phase 3 for finally liquidated entries is scheduled for end of July 2026, indicating substantial processing volume ahead. CBP has processed $24 billion but projects reaching $60 billion by month-end with $89 billion total accepted. CBP noted processing the full volume would require 4,431,161 working hours or 533,896 days of eight-hour work, demonstrating the massive backlog requiring months of processing."
+      "reasoning": "Phase 2 of CAPE remains on track for June 29, 2026 launch to address entries flagged for reconciliation, and Phase 3 will be ready by end of July 2026 covering finally liquidated entries. Over 26,000 importers have enrolled representing only 78% of impacted entries, indicating substantial unprocessed volume remains."
     },
     {
       "id": "market_readiness",
       "name": "Importer Unpreparedness",
-      "score": 6,
+      "score": 8,
       "weight": 0.18,
-      "weighted_contribution": 10.0,
-      "reasoning": "As of April 26, only 75,306 CAPE Declarations were submitted covering 11.2 million entries (21% of eligible), and by May 11, only 126,237 claims were submitted with 86,874 passing initial checks. The CIT order benefits small importers particularly, but they may need to pay fees to customs brokers to file declarations, yet many smaller importers still likely believe applying makes business sense."
+      "weighted_contribution": 14.0,
+      "reasoning": "More than 26,000 importers of record have enrolled, representing approximately 78% of impacted entries, meaning 22% of affected importers (roughly 70,000+ based on 330,000 total affected) remain unregistered. The economics of CAPE work for large IORs and licensed brokers operating at scale but often do not work for occasional importers, small DTC brands, or merchants with low-value entries."
     },
     {
       "id": "legal_certainty",
       "name": "Legal Stability",
-      "score": 4,
+      "score": 3,
       "weight": 0.15,
-      "weighted_contribution": 5.0,
-      "reasoning": "The government appealed the CIT's universal injunction to the Federal Circuit on June 2, 2026, which could have significant consequences for importers seeking refunds, particularly those who haven't filed lawsuits. If the government obtains a stay or prevails on appeal, importers without their own lawsuits could lose their pathway to refunds on liquidated entries. The government's deadline to appeal runs through early June 2026, and a successful appeal could result in a stay of the refund process and significantly delay payments."
+      "weighted_contribution": 3.3,
+      "reasoning": "On June 2, 2026, DOJ formally appealed the universal injunction requiring CBP to refund $166 billion in IEEPA tariffs to the Federal Circuit. CBP asserted for the first time that it lacks legal authority to issue IEEPA refunds on finally liquidated entries without importer-specific court judgments, and the federal government continues to contest the legal basis for refunds."
     },
     {
       "id": "competition_density",
       "name": "Competitive Space",
-      "score": 6,
+      "score": 7,
       "weight": 0.12,
-      "weighted_contribution": 6.7,
-      "reasoning": "Filing can be done directly by importers of record or their authorized customs brokers through the ACE Portal, with many established law firms and accounting firms already providing guidance. Multiple service providers are offering IEEPA/CAPE services with significantly varying pricing, and importers are advised to get quotes from multiple experienced providers and understand competitive fee structures."
+      "weighted_contribution": 8.0,
+      "reasoning": "Investment firms are purchasing IEEPA refund claims, and major law firms like Faegre Drinker are tracking developments with specialized teams. The economics of CAPE work for large IORs and licensed brokers operating at scale, but direct competition for mid-market services appears limited based on available evidence."
     },
     {
       "id": "fee_pressure",
       "name": "Fee Sustainability",
-      "score": 5,
+      "score": 6,
       "weight": 0.1,
-      "weighted_contribution": 4.4,
-      "reasoning": "CBP does not charge any fees for processing tariff refunds, making the process theoretically free for importers who can handle it themselves. However, the net amount importers keep depends heavily on who they work with and fee structures, with significant pricing variation among providers making competitive quotes important for final recovery amounts."
+      "weighted_contribution": 5.6,
+      "reasoning": "No specific data found on current fee rates for IEEPA refund intermediaries in search results. For smaller importers, the time and cost of completing CAPE prerequisites can exceed refund value, suggesting willingness to pay for professional assistance. However, lack of concrete pricing data requires conservative scoring."
     },
     {
       "id": "regulatory_risk",
       "name": "Regulatory Risk",
-      "score": 7,
+      "score": 4,
       "weight": 0.07,
-      "weighted_contribution": 4.7,
-      "reasoning": "Section 122 replacement tariffs expire July 24, 2026 unless Congress acts, with no extension legislation introduced, potentially creating a tariff vacuum. The Supreme Court's February 20, 2026 decision affirming IEEPA tariffs are invalid becomes final on March 17, 2026, providing legal stability for the refund process itself."
+      "weighted_contribution": 2.3,
+      "reasoning": "DOJ formally appealed the universal refund order on June 2, 2026, challenging both the universal IEEPA tariff refund order and CBP Commissioner's testimony requirement. If the Federal Circuit grants a stay, refund processing could halt mid-stream, with the 60-90 day refund clock starting at acceptance, not submission."
     }
   ]
 }
